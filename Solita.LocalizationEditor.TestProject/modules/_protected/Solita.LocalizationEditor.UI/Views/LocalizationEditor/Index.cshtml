@@ -110,7 +110,7 @@
                         <tr class="version-revert-row">
                             <td>
                                 <select class="version-selector">
-                                    @foreach (var version in Model.Versions.Reverse())
+                                    @foreach (var version in Model.Versions)
                                     {
                                         <option value="@version.Id">@version.Name - @version.Created.ToShortDateString() @version.Created.ToShortTimeString() - @version.CreatedBy</option>
                                     }
