@@ -1,0 +1,39 @@
+<languages>
+  <language id="en" name="English">
+    <common>
+      <sitename>newCompany</sitename>
+      <languagemenufi>Finnish</languagemenufi>
+      <languagemenusv>Swedish</languagemenusv>
+      <languagemenuen>English</languagemenuen>
+      <languagemenuru>Russian</languagemenuru>
+    </common>
+    <social>
+      <share>Share</share>
+    </social>
+  </language>
+  <language id="sv" name="svenska">
+    <common>
+      <sitename>newCompany</sitename>
+      <languagemenufi>Suomi</languagemenufi>
+      <languagemenusv>Ruotsi</languagemenusv>
+      <languagemenude>German</languagemenude>
+    </common>
+    <social>
+      <share>Share in swedish</share>
+    </social>
+  </language>
+  <language id="fi" name="suomi">
+    <common>
+      <sitename>newCompany</sitename>
+      <languagemenuzh>Chinese</languagemenuzh>
+    </common>
+    <social>
+      <share>Jaa</share>
+    </social>
+  </language>
+  <language id="de" name="Deutsch">
+    <common>
+      <languagemenucs>Czech</languagemenucs>
+    </common>
+  </language>
+</languages>

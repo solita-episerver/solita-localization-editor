@@ -1,0 +1,31 @@
+﻿@using EPiServer.Web.Mvc.Html
+@using EPiServer.Core
+
+<!DOCTYPE html>
+<html lang="@Html.ViewContext.RequestContext.RouteData.Values["lang"]">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="generator" content="EPiServer CMS Falcon" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>EPiServer MVC Razor Example</title>
+    <link rel="stylesheet" href="@Href(Url.Content("~/Content/Site.css"))" media="all" />
+</head>
+<body>
+    <header>
+        <h1>EPiServer MVC Razor Example</h1>
+        <section></section>
+        <p>LocalizationResult editor Blob storage test: @Html.Translate("/common/languagemenufi")</p>
+    </header>
+    <section id="main">
+        <nav id="subnavigation">
+        </nav>        
+        <section id="content">
+            @RenderBody()            
+        </section>
+    </section>
+    <footer class="mainfooter">
+        <p>&copy; Copyright @DateTime.Now.Year - EPiServer, Inc.</p>
+    </footer>
+</body>
+</html>

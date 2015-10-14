@@ -38,3 +38,7 @@
 .localization-editor .image-button {
     padding: 1px;
 }
+
+#progress-loader {
+    display: none;
+}

@@ -1,9 +1,115 @@
 ﻿"use strict";
 
-var languageditor = (function() {
-    $(document).ready(function() {
 
-        $(".csv-export").click(function() {
+
+var domUpdateHelper = (function () {
+    var mod = {};
+
+    var getOriginalValue = function (translationInput) {
+        return $(translationInput).data("original");
+    }
+
+    var getDefaultValue = function (translationInput) {
+        return $(translationInput).closest(".translations-row").data("default");
+    }
+
+    mod.getInputsByLanguage = function (lang) {
+        return $("td[data-lang='" + lang + "']").find(".translation-input");
+    }
+
+    mod.setOriginalValue = function(translationInput) {
+        $(translationInput).val(getOriginalValue(translationInput)).change();
+    }
+
+    mod.setDefaultValue = function(translationInput) {
+        $(translationInput).val(getDefaultValue(translationInput)).change();
+    }
+
+    mod.setModifiedStatus = function(translationInput) {
+        translationInput.removeClass("value-modified");
+        translationInput.removeClass("value-new");
+        var originalValue = getOriginalValue(translationInput);
+        if (translationInput.val() !== originalValue) {
+            if (originalValue == "") {
+                translationInput.addClass("value-new");
+            } else {
+                translationInput.addClass("value-modified");
+            }
+        }
+    }
+
+    mod.setInput = function (key, language, translation) {
+        $(".translations-row[data-key='" + key + "']")
+            .find("td[data-lang='" + language + "']")
+            .find(".translation-input")
+            .val(translation)
+            .change();
+    }
+
+    mod.updateLocalizationsDom = function (jsonLocalizations) {
+        if (jsonLocalizations == null || jsonLocalizations === 'undefined') {
+            throw "argument null in updateLocalizationsDom";
+        }
+        var def = Q.defer();
+        Q.fcall(function() {
+            jsonLocalizations.forEach(function(localization) {
+                localization.Translations.forEach(function(translation) {
+                    mod.setInput(localization.Key, translation.Language, translation.Value);
+                });
+            });
+            def.resolve(null);
+        });
+        return def.promise;
+    };
+
+    return mod;
+}());
+
+var localizationsRepo = (function() {
+    var mod = {};
+
+    mod.ajaxCall = function (paramsObj) {
+        return Q($.ajax(paramsObj));
+    }
+
+    mod.getLocalizationsForVersion = function (version) {
+        var url = $(".localization-editor").data("localizations-url") + '?version=' + version;
+        return mod.ajaxCall({
+            url: url,
+            type: 'POST',
+            dataType: 'json'
+        });
+    };
+
+    mod.getLocalizationsJsonFromXml = function(xmlString) {
+        var url = $(".localization-editor").data("localizations-transform-url");
+        return mod.ajaxCall(
+        {
+            url: url,
+            type: 'POST',
+            data:xmlString,
+            dataType: 'json'
+        });
+    };
+
+    return mod;
+}());
+
+var languageditor = (function () {    
+    $(document).ready(function () {
+        var domHelper = domUpdateHelper;
+
+        var setProgressLoaderVisible = function(visible) {
+            var progressLoaderSelector = "#progress-loader";
+            var loader = $(progressLoaderSelector);
+            if (visible) {
+                loader.show();
+            } else {
+                loader.hide();
+            }
+        };
+
+        $(".csv-export").click(function () {
             var rows = new Array();
 
             var firstRowColumns = new Array();
@@ -44,7 +150,6 @@ var languageditor = (function() {
             if (fileupload.files.length < 1) {
                 return;
             }
-
             var file = fileupload.files[0];
 
             if (!file.type.match('text/plain')) {
@@ -55,18 +160,21 @@ var languageditor = (function() {
             var reader = new FileReader();
             reader.onload = (function() {
                 return function(e) {
-                    var rows = e.target.result.split(/[\r\n]/g);
-                    var languages = rows[0].split("\t").slice(2);
-                    var translationRows = rows.slice(1);
-
-                    translationRows.forEach(function(row) {
-                        var columns = row.split("\t");
-                        var key = columns[0];
-                        var translations = columns.slice(2);
-
-                        for (var k = 0; k < translations.length; k++) {
-                            setInput(key, languages[k], translations[k]);
-                        }
+                    Q.fcall(function() {
+                            setProgressLoaderVisible(true);
+                        })
+                    .then(function () {
+                        var xml = e.target.result;
+                        return localizationsRepo.getLocalizationsJsonFromXml(xml);
+                    })
+                    .then(function(localizations) {
+                            return domHelper.updateLocalizationsDom(localizations);
+                    })
+                    .finally(function() {
+                        setProgressLoaderVisible(false);
+                    })
+                    .catch(function(error) {
+                            alert("Error when importing: " + error.message);
                     });
                 };
             })(file);
@@ -76,95 +184,54 @@ var languageditor = (function() {
 
         $(".version-revert").click(function() {
             var version = $(this).siblings(".version-selector:first").val();
-            var url = $(".localization-editor").data("localizations-url") + '?version=' + version;
-
-            $.ajax({
-                url: url,
-                success: function(json) {
-                    json.localizations.forEach(function(localization) {
-                        localization.translations.forEach(function(translation) {
-                            setInput(localization.key, translation.language, translation.value);
-                        });
-                    });
-                },
-                type: 'POST',
-                dataType: 'json'
-            });
+            Q.fcall(function() {
+                setProgressLoaderVisible(true);
+                })
+                .then(function() {
+                    return localizationsRepo.getLocalizationsForVersion(version);
+                })
+                .then(function(locazationsJson) {
+                    return domHelper.updateLocalizationsDom(locazationsJson);
+                })
+                .finally(function() {
+                    setProgressLoaderVisible(false);
+                })
+                .catch(function(error) {
+                    alert("Error in reverting version: " + error.message);
+                });
         });
 
         $(".undo-cell").click(function() {
             var translationInput = $(this).siblings(".translation-input:first");
-            setOriginalValue(translationInput);
+            domHelper.setOriginalValue(translationInput);
         });
 
         $(".undo-all").click(function() {
             $(".translation-input").each(function() {
-                setOriginalValue($(this));
+                domHelper.setOriginalValue($(this));
             });
         });
 
         $(".defaults-cell").click(function() {
             var translationInput = $(this).siblings(".translation-input:first");
-            setDefaultValue(translationInput);
+            domHelper.setDefaultValue(translationInput);
         });
 
         $(".defaults-column").click(function() {
             var lang = $(this).parent().data("lang");
-            getInputsByLanguage(lang).each(function() {
-                setDefaultValue($(this));
+            domHelper.getInputsByLanguage(lang).each(function () {
+                domHelper.setDefaultValue($(this));
             });
         });
 
         $(".defaults-row").click(function() {
             $(this).closest(".translations-row").find(".translation-input").each(function() {
-                setDefaultValue($(this));
+                domHelper.setDefaultValue($(this));
             });
         });
 
         $(".translation-input").change(function() {
-            setModifiedStatus($(this));
+            domHelper.setModifiedStatus($(this));
         });
     });
-
-    function getInputsByLanguage(lang) {
-        return $("td[data-lang='" + lang + "']").find(".translation-input");
-    }
-
-    function setOriginalValue(translationInput) {
-        $(translationInput).val(getOriginalValue(translationInput)).change();
-    }
-
-    function getOriginalValue(translationInput) {
-        return $(translationInput).data("original");
-    }
-
-    function setDefaultValue(translationInput) {
-        $(translationInput).val(getDefaultValue(translationInput)).change();
-    }
-
-    function getDefaultValue(translationInput) {
-        return $(translationInput).closest(".translations-row").data("default");
-    }
-
-    function setModifiedStatus(translationInput) {
-        translationInput.removeClass("value-modified");
-        translationInput.removeClass("value-new");
-        var originalValue = getOriginalValue(translationInput);
-        if (translationInput.val() !== originalValue) {
-            if (originalValue == "") {
-                translationInput.addClass("value-new");
-            } else {
-                translationInput.addClass("value-modified");
-            }
-        }
-    }
-
-    function setInput(key, language, translation) {
-        $(".translations-row[data-key='" + key + "']")
-            .find("td[data-lang='" + language + "']")
-            .find(".translation-input")
-            .val(translation)
-            .change();
-    }
-    
 }());

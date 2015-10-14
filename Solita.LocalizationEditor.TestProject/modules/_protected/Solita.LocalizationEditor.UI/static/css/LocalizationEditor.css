@@ -1,0 +1,44 @@
+﻿.localization-editor {
+    margin: 10px;
+}
+
+    .localization-editor td {
+        padding: 0 5px;
+        white-space: nowrap;
+    }
+
+    .localization-editor th {
+        text-align: center;
+    }
+
+    .localization-editor table {
+        margin-bottom: 2em;
+    }
+
+.localization-editor .heading-row {
+    padding-top: 1em;
+}
+
+.localization-editor .value-modified {
+    background-color: lightgoldenrodyellow;
+}
+
+.localization-editor .value-new {
+    background-color: lightgreen;
+}
+
+.localization-editor .translations-row input[type=text] {
+    width: 200px;
+}
+
+.localization-editor .hidden {
+    display: none;
+}
+
+.localization-editor .image-button {
+    padding: 1px;
+}
+
+#progress-loader {
+    display: none;
+}

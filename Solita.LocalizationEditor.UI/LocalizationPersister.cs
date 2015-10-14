@@ -13,26 +13,26 @@ using EPiServer.ServiceLocation;
 using EPiServer.Web.Hosting;
 using Solita.LocalizationEditor.Definitions;
 using Solita.LocalizationEditor.UI.Common;
+using Solita.LocalizationEditor.UI.DAL;
+using Solita.LocalizationEditor.UI.Helpers;
 using Solita.LocalizationEditor.UI.Models;
+using System.Xml.Linq;
+using System.Xml.XPath;
+using Castle.Core.Internal;
 
 namespace Solita.LocalizationEditor.UI
 {
     public class LocalizationPersister
     {
         private const string TranslationFile = "Localizations.xml";
-        private const string LanguagesXPath = "/languages";
-        private const string LanguageXPath = LanguagesXPath + "/language";
-        private const string TranslationXPath = LanguageXPath + "[@id='{0}']{1}";
+        public FileAccessStrategy AccessStrategy { get; }
 
-        private readonly string _translationFilePath;
-
-        public LocalizationPersister()
+        public LocalizationPersister(FileAccessStrategy accessStrategy)
         {
-            var folderPath = VirtualPathUtility.AppendTrailingSlash(Settings.AutoPopulated.LangFolderVirtualPath);
-            _translationFilePath = VirtualPathUtility.Combine(folderPath, TranslationFile);
+            AccessStrategy = accessStrategy != null ? accessStrategy : new BlobFileAccessStrategy();
         }
 
-        public IList<string> GetEnabledLanguages()
+        public virtual IList<string> GetEnabledLanguages()
         {
             return ServiceLocator.Current.GetInstance<ILanguageBranchRepository>()
                               .ListEnabled()
@@ -42,18 +42,18 @@ namespace Solita.LocalizationEditor.UI
 
         public CategoryList GetLocalizations()
         {
-            var xml = LoadXml(_translationFilePath);
+            var xml = LoadXml();
             var languages = GetEnabledLanguages();
             var categories = new CategoryList();
-              
-            foreach (var localization in LocalizationHelpers.GetLocalizationDefinitions())
+
+            foreach (var localization in GetLocalizationDefinitions())
             {
                 var translation = categories.AddTranslation(
                     localization.Key, localization.Description, localization.Category, localization.DefaultValue);
 
                 foreach (var lang in languages)
                 {
-                    var value = FindExistingTranslation(xml, lang, translation.Key);
+                    var value = XmlLanguageFileHelper.FindExistingTranslation(xml, lang, translation.Key);
                     translation.AddTranslation(lang, value ?? string.Empty);
                 }
             }
@@ -61,130 +61,140 @@ namespace Solita.LocalizationEditor.UI
             return categories;
         }
 
-        public object GetJsonLocalizations(string version)
+        private IEnumerable<LocalizationResult.Translation> GetTranslationsForKey(IEnumerable<string> languages, string translationValue)
         {
-            var xml = LoadXml(_translationFilePath, version);
+            return languages.Select(l => new LocalizationResult.Translation()
+            {
+                Language = l,
+                Value = translationValue
+            });
+        }
+
+        public IEnumerable<LocalizationResult> GetTranslationsForVersion(string version)
+        {
+            var xml = LoadXmlVersion(version);
             var languages = GetEnabledLanguages();
+            var definitions = GetLocalizationDefinitions();
 
-            var localizations = LocalizationHelpers.GetLocalizationDefinitions().Select(d => new
-                {
-                    key = d.Key,
-                    translations = languages.Select(language => new {language, value = FindExistingTranslation(xml, language, d.Key)})
-                });
+            var matchingDefinitions =
+                    from definition in definitions
+                    let translations = FindExistingTranslations(xml, languages, definition.Key)
+                    where translations.Count() > 0
+                    select new LocalizationResult
+                    {
+                        Key = definition.Key,
+                        Translations = translations.ToList()
 
+                    };
 
-            return new {localizations};
+            return matchingDefinitions;
+        }
+
+        public virtual IList<LocalizationDefinition> GetLocalizationDefinitions()
+        {
+            return LocalizationHelpers.GetLocalizationDefinitions();
         }
 
         public IList<XmlVersionInfo> GetTranslationFileVersions()
         {
-            var versions = new List<XmlVersionInfo>();
-            if (HostingEnvironment.VirtualPathProvider.FileExists(_translationFilePath))
-            {
-                var file = (UnifiedFile) HostingEnvironment.VirtualPathProvider.GetFile(_translationFilePath);
-                var versioningFile = file as VersioningFile;
-                if (versioningFile != null)
-                {
-                    versions.AddRange(
-                        versioningFile.GetVersions()
-                                      .Select(v => new XmlVersionInfo(v.Id.ToString(), v.Name, v.Created, v.CreatedBy)));
-                }
-            }
-
-            return versions;
+            return AccessStrategy.GetTranslationFileVersions();
         }
 
-        private static XmlDocument LoadXml(string filePath)
+        public virtual XmlDocument LoadXml()
         {
-            return LoadXml(filePath, null);
+            return AccessStrategy.LoadXml();
         }
 
-        private static XmlDocument LoadXml(string filePath, string version)
+        public virtual XmlDocument LoadXmlVersion(string version)
         {
-            if (!HostingEnvironment.VirtualPathProvider.FileExists(filePath))
-            {
-                return new XmlDocument();
-            }
-
-            var file = (UnifiedFile)HostingEnvironment.VirtualPathProvider.GetFile(filePath);
-            if (version != null)
-            {
-                // Will throw an exception if the VPP folder doesn't support versioning, but that's reasonable here.
-                file = ((VersioningFile) file).GetVersion(version);
-            }
-
-            using (var stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.Read))
-            {
-                var document = new XmlDocument();
-                document.Load(stream);
-                return document;
-            }
+            return AccessStrategy.LoadVersion(version);
         }
 
-        private static string FindExistingTranslation(XmlNode xml, string lang, string key)
+        public string FindExistingTranslation(XmlNode xml, string lang, string key)
         {
-            var xpath = string.Format(TranslationXPath, lang, key);
-            var node = xml.SelectSingleNode(xpath);
-
-            return node == null ? null : node.InnerText;
+            return XmlLanguageFileHelper.FindExistingTranslation(xml, lang, key);
         }
-   
-        public void SaveLocalizations(LocalizationEditorViewModel model)
-        {
-            var xml = new XmlDocument();
-            // Ensure root node is created
-            xml.CreateXPath(LanguagesXPath);
 
-            foreach(var translation in model.Categories.SelectMany(category => category.Translations))
+        public IEnumerable<LocalizationResult.Translation> FindExistingTranslations(XmlNode node, IEnumerable<string> languages, string key)
+        {
+            return languages.Select(lang => new LocalizationResult.Translation()
+            {
+                Language = lang,
+                Value = FindExistingTranslation(node, lang, key)
+            });
+        }
+
+        public XmlDocument SaveLocalizations(LocalizationEditorViewModel model)
+        {
+            XmlLanguageFileHelper languageXmlFileHelper = new XmlLanguageFileHelper();
+            languageXmlFileHelper.EnsureLanguagesXPath();
+
+            foreach (var translation in model.Categories.SelectMany(category => category.Translations))
             {
                 foreach (var dictionary in translation.Translations)
                 {
-                    if (!string.IsNullOrWhiteSpace(dictionary.Value)) {
-                        SetTranslation(xml, translation.Key, dictionary.Key, dictionary.Value);
+                    if (!string.IsNullOrWhiteSpace(dictionary.Value))
+                    {
+                        languageXmlFileHelper.SetTranslation(translation.Key, dictionary.Key, dictionary.Value);
                     }
                 }
             }
 
-            AddLanguageNames(xml);
-            SaveXml(xml, _translationFilePath);
-
+            languageXmlFileHelper.AddLanguageNames();
+            AccessStrategy.SaveXml(languageXmlFileHelper.XmlDoc);
             LocalizationsUpdatedEventHandler.RaiseLocalizationsUpdatedEvent();
+
+            return languageXmlFileHelper.XmlDoc;
         }
+    }
 
-        private static void SetTranslation(XmlDocument xml, string key, string lang, string value)
+    public class LocalizationResult
+    {
+        public string Key { get; set; }
+
+        public List<Translation> Translations { get; set; }
+
+        public override bool Equals(object obj)
         {
-            var xPath = string.Format(TranslationXPath, lang, key);
-            var node = xml.CreateXPath(xPath);
-            node.InnerText = value;
-        }
-
-        private static void AddLanguageNames(XmlDocument xml)
-        {
-            var nodes = xml.SelectNodes(LanguageXPath);
-            if (nodes == null)
-                return;
-
-            foreach (XmlNode node in nodes)
+            LocalizationResult result = obj as LocalizationResult;
+            if (result == null || result.Key != Key)
             {
-                var id = node.Attributes["id"].InnerText;
-                var attribute = xml.CreateAttribute("name");
-                attribute.InnerText = CultureInfo.GetCultureInfo(id).NativeName;
-                node.Attributes.Append(attribute);
+                return false;
             }
+
+            return true;
         }
 
-        private static void SaveXml(XmlDocument xml, string filePath)
+        public override int GetHashCode()
         {
-            var path = filePath.Substring(0, filePath.LastIndexOf("/", StringComparison.Ordinal) + 1);
-            var unifiedDirectory = (UnifiedDirectory) HostingEnvironment.VirtualPathProvider.GetDirectory(path);
+            return (Key ?? string.Empty).GetHashCode();
+        }
 
-            var file = HostingEnvironment.VirtualPathProvider.FileExists(filePath)
-                           ? (UnifiedFile) HostingEnvironment.VirtualPathProvider.GetFile(filePath)
-                           : unifiedDirectory.CreateFile(filePath);
-
-            using (var stream = file.Open(FileMode.OpenOrCreate, FileAccess.Write))
+        public class Translation
+        {
+            public Translation() { }
+            public Translation(string language, string value)
             {
-                xml.Save(stream);
+                Language = language;
+                Value = value;
+            }
+            public string Language { get; set; }
+            public string Value { get; set; }
+
+            public override bool Equals(object obj)
+            {
+                Translation trans = obj as Translation;
+                if (trans == null || trans.Language != Language || trans.Value != Value)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+
+            public override int GetHashCode()
+            {
+                return (Language ?? string.Empty).GetHashCode() + (Value ?? string.Empty).GetHashCode();
             }
         }
     }

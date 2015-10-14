@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Solita.LocalizationEditor")]
-[assembly: AssemblyDescription("Localization Editor for EPiServer CMS")]
+[assembly: AssemblyDescription("LocalizationResult Editor for EPiServer CMS")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Solita Oy")]
 [assembly: AssemblyProduct("Solita.LocalizationEditor")]
