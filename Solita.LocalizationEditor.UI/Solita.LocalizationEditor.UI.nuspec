@@ -12,7 +12,7 @@
     <projectUrl>https://github.com/solita-episerver/solita-localization-editor</projectUrl>
     <dependencies>
       <dependency id="Solita.LocalizationEditor.Definitions" version="1.0.0.0" />
-      <dependency id="Episerver.CMS.Core" version="7.6.0" />
+      <dependency id="Episerver.CMS.Core" version="8.8.0" />
     </dependencies>
   </metadata>
 </package>
