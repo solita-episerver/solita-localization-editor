@@ -13,8 +13,9 @@
 <html>
     <head>
         <title>@Html.Translate("/LocalizationEditor/title")</title>
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>*@
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="@ModuleUtil.PathTo("static/lib/q.min.js")"></script>
         <script src="@ModuleUtil.PathTo("static/js/LocalizationEditor.js")"></script>
         <link rel="stylesheet" href="@ModuleUtil.PathTo("static/css/LocalizationEditor.css")" type="text/css">
        
@@ -33,7 +34,7 @@
         <div id="epi-globalDocument">
             @Html.Raw(Html.GlobalMenu())
 
-            <div class="localization-editor" data-localizations-url="@Url.Action("GetJsonLocalizations")">
+            <div class="localization-editor" data-localizations-url="@Url.Action("GetJsonLocalizations")" data-localizations-transform-url="@Url.Action("TransformLocalizationXmlToJsonLocazlitaions")">
 
                 @using (Html.BeginForm(new { Action = "Save" }))
                 {
@@ -101,21 +102,22 @@
                         }
 
                     </table>
-
-                    
+                    <div id="progress-loader">
+                        <img src="@ModuleUtil.PathTo("/static/img/ajax-loader.gif")" />
+                    </div>
                     <table>
                         <tr><td class="heading-row"><strong>@Html.Translate("/LocalizationEditor/reverttoolderversion")</strong></td></tr>
                         <tr class="version-revert-row">
                             <td>
                                 <select class="version-selector">
-                                    @foreach (var version in Model.Versions.Reverse())
+                                    @foreach (var version in Model.Versions)
                                     {
                                         <option value="@version.Id">@version.Name - @version.Created.ToShortDateString() @version.Created.ToShortTimeString() - @version.CreatedBy</option>
                                     }
                                 </select>
                                 <button type="button" class="version-revert image-button" title="@Html.Translate("/LocalizationEditor/reverttoolderversion")">
-                                    <img src="@ModuleUtil.PathTo("/static/img/arrow_up.png")" alt="@Html.Translate("/LocalizationEditor/reverttoolderversion")" />
-                                </button>
+                                    <img src="@ModuleUtil.PathTo("/static/img/arrow_up.png")" alt="@Html.Translate("/LocalizationEditor/reverttoolderversion")"/>
+                                </button>                                
                             </td>
                         </tr>
                             

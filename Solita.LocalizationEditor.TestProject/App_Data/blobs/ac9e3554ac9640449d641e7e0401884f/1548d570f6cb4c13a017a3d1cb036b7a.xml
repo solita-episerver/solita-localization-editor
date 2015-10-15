@@ -1,0 +1,16 @@
+<languages>
+  <language id="en" name="English">
+    <common>
+      <languagemenufi>Finnish</languagemenufi>
+      <languagemenusv>Swedish</languagemenusv>
+      <languagemenuen>English</languagemenuen>
+      <languagemenuru>Russian</languagemenuru>
+    </common>
+  </language>
+  <language id="sv" name="svenska">
+    <common>
+      <languagemenufi>Suomi</languagemenufi>
+      <languagemenusv>Ruotsi</languagemenusv>
+    </common>
+  </language>
+</languages>

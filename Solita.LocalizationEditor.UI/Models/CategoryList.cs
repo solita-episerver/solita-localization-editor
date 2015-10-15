@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Castle.Core.Internal;
 
 namespace Solita.LocalizationEditor.UI.Models
 {
@@ -46,6 +47,36 @@ namespace Solita.LocalizationEditor.UI.Models
             public void AddTranslation(string languageId, string value)
             {
                 Translations.Add(languageId, value);
+            }
+
+            public override bool Equals(object obj)
+            {
+                var translation = obj as Translation;
+                if (translation == null)
+                {
+                    return false;
+                }
+                if (
+                    string.Compare(translation.Key, Key) != 0 || 
+                    string.Compare(translation.Description, Description) != 0 || 
+                    string.Compare(translation.DefaultValue, DefaultValue) != 0)
+                {
+                    return false;
+                }
+                if (translation.Translations == null && Translations != null || Translations == null && translation.Translations != null)
+                {
+                    return false;
+                }
+                if (translation.Translations == null && Translations == null)
+                {
+                    return true;
+                }
+                return true;
+            }
+
+            public override int GetHashCode()
+            {
+                return Key != null ? Key.GetHashCode() : 0;
             }
         }
 
