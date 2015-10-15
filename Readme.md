@@ -1,16 +1,7 @@
 # Localization Editor
 
 LocalizationEditorin tarkoituksena on tarjota käyttöliittymä kielikäännösten hallintaan. Editori otetaan käyttöön projekteissa includaamalla LocalizationEditor Nugetin kautta: https://www.myget.org/feed/solita-episerver/package/nuget/Solita.LocalizationEditor.UI .
-Editorin LocalizationProvider initialisoidaan näin:
-    
-	```C#
-    [InitializableModule]
-    [ModuleDependency(typeof(FrameworkInitialization))]
-    public class LocalizationInit : TranslationProviderInitialization
-    {
-        
-    }
-    ```
+
 Kategorioiden/kielikäännösten määritys:
 
     ```C#
