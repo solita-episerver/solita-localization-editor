@@ -1,0 +1,28 @@
+<languages>
+  <language id="fi" name="suomi">
+    <common>
+      <sitename>myCompany</sitename>
+      <languagemenuzh>Chinese</languagemenuzh>
+    </common>
+  </language>
+  <language id="en" name="English">
+    <common>
+      <languagemenufi>Finnish</languagemenufi>
+      <languagemenusv>Swedish</languagemenusv>
+      <languagemenuen>English</languagemenuen>
+      <languagemenuru>Russian</languagemenuru>
+    </common>
+  </language>
+  <language id="sv" name="svenska">
+    <common>
+      <languagemenufi>Suomi</languagemenufi>
+      <languagemenusv>Ruotsi</languagemenusv>
+      <languagemenude>German</languagemenude>
+    </common>
+  </language>
+  <language id="de" name="Deutsch">
+    <common>
+      <languagemenucs>Czech</languagemenucs>
+    </common>
+  </language>
+</languages>

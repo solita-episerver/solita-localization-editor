@@ -1,0 +1,152 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Solita.LocalizationEditor.UI.Models.LocalizationEditorViewModel>
+
+@using System.Globalization
+@using System.Web.Mvc.Html
+@using EPiServer.Framework.Web.Resources
+@using EPiServer.Shell.Navigation
+@using EPiServer.Shell.Web.Mvc.Html
+@using Solita.LocalizationEditor.UI.Common
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@Html.Translate("/LocalizationEditor/title")</title>
+        @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>*@
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="@ModuleUtil.PathTo("static/lib/q.min.js")"></script>
+        <script src="@ModuleUtil.PathTo("static/js/LocalizationEditor.js")"></script>
+        <link rel="stylesheet" href="@ModuleUtil.PathTo("static/css/LocalizationEditor.css")" type="text/css">
+       
+        <!-- Shell -->
+        @Html.Raw(ClientResources.RenderResources("ShellCore"))
+        @Html.Raw(ClientResources.RenderResources("ShellWidgets"))
+        <!-- LightTheme -->
+        @Html.Raw(ClientResources.RenderResources("ShellCoreLightTheme"))
+        <!-- Navigation -->
+        @Html.Raw(ClientResources.RenderResources("Navigation"))
+        <!-- Dojo Dashboard -->
+        @Html.Raw(ClientResources.RenderResources("DojoDashboardCompatibility"))
+    </head>
+
+    <body>
+        <div id="epi-globalDocument">
+            @Html.Raw(Html.GlobalMenu())
+
+            <div class="localization-editor" data-localizations-url="@Url.Action("GetJsonLocalizations")" data-localizations-transform-url="@Url.Action("TransformLocalizationXmlToJsonLocazlitaions")">
+
+                @using (Html.BeginForm(new { Action = "Save" }))
+                {
+
+                    <table>
+                        <tr class="languages-row">
+                            <th></th>
+                            <th></th>
+                            @foreach (var lang in Model.Languages)
+                            {
+                                <th data-lang="@lang">
+                                    @CultureInfo.GetCultureInfo(lang).DisplayName
+                                    @if (Model.PowertoolsMode)
+                                    {
+                                        <button type="button" class="defaults-column image-button" title="@Html.Translate("/LocalizationEditor/setcolumndefaults")">
+                                            <img src="@ModuleUtil.PathTo("/static/img/arrow_down.png")" alt="@Html.Translate("/LocalizationEditor/setcolumndefaults")" />
+                                        </button>
+                                    }
+                                </th>
+                            }
+                        </tr>
+        
+                        @for (var iCat = 0; iCat < Model.Categories.Count(); iCat++)
+                        {
+                            <tr class="category-row"><td class="heading-row"><strong class="category">@Model.Categories[iCat].Name</strong></td></tr>
+
+                            for (var iTrans = 0; iTrans < Model.Categories[iCat].Translations.Count(); iTrans++)
+                            {
+                                <tr class="translations-row"
+                                    data-default="@Model.Categories[iCat].Translations[iTrans].DefaultValue"
+                                    data-key="@Model.Categories[iCat].Translations[iTrans].Key" 
+                                    data-description="@Model.Categories[iCat].Translations[iTrans].Description">
+                                    <td>
+                                        @Model.Categories[iCat].Translations[iTrans].Description
+                                        @Html.HiddenFor(m => m.Categories[iCat].Translations[iTrans].Key)
+                                        @Html.HiddenFor(m => m.Categories[iCat].Translations[iTrans].Description)
+                                    </td>
+                
+                                    <td>
+                                        @if (Model.PowertoolsMode)
+                                        {
+                                            <button type="button" class="defaults-row image-button" title="@Html.Translate("/LocalizationEditor/setrowdefaults")" >
+                                                <img src="@ModuleUtil.PathTo("/static/img/arrow_right.png")" alt="@Html.Translate("/LocalizationEditor/setrowdefaults")" />
+                                            </button>
+                                        }
+                                    </td>
+                
+                                    @foreach (var lang in Model.Languages)
+                                    {
+                                        <td data-lang="@lang">
+                                            @Html.TextBoxFor(m => m.Categories[iCat].Translations[iTrans].Translations[lang], new { @class = "translation-input", data_original = Model.Categories[iCat].Translations[iTrans].Translations[lang] })
+                                            <button type="button" class="undo-cell image-button" title="@Html.Translate("/LocalizationEditor/undo")">
+                                                <img src="@ModuleUtil.PathTo("/static/img/arrow_undo.png")" alt="@Html.Translate("/LocalizationEditor/undo")" />
+                                            </button>
+                                            @if (Model.PowertoolsMode)
+                                            {
+                                                <button type="button" class="defaults-cell image-button" title="@Html.Translate("/LocalizationEditor/setdefault")"  >
+                                                    <img src="@ModuleUtil.PathTo("/static/img/arrow_in.png")" alt="@Html.Translate("/LocalizationEditor/setdefault")" />
+                                                </button>
+                                            }
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+
+                    </table>
+                    <div id="progress-loader">
+                        <img src="@ModuleUtil.PathTo("/static/img/ajax-loader.gif")" />
+                    </div>
+                    <table>
+                        <tr><td class="heading-row"><strong>@Html.Translate("/LocalizationEditor/reverttoolderversion")</strong></td></tr>
+                        <tr class="version-revert-row">
+                            <td>
+                                <select class="version-selector">
+                                    @foreach (var version in Model.Versions)
+                                    {
+                                        <option value="@version.Id">@version.Name - @version.Created.ToShortDateString() @version.Created.ToShortTimeString() - @version.CreatedBy</option>
+                                    }
+                                </select>
+                                <button type="button" class="version-revert image-button" title="@Html.Translate("/LocalizationEditor/reverttoolderversion")">
+                                    <img src="@ModuleUtil.PathTo("/static/img/arrow_up.png")" alt="@Html.Translate("/LocalizationEditor/reverttoolderversion")"/>
+                                </button>                                
+                            </td>
+                        </tr>
+                            
+                        @if (Model.PowertoolsMode)
+                        {
+                            <tr><td class="heading-row"><strong>@Html.Translate("/LocalizationEditor/importexport")</strong></td></tr>
+                            <tr class="import-export-row">
+                                <td>
+                                    <input type="file" class="csv-file-upload" />
+                                    <button type="button" class="csv-import image-button" title="@Html.Translate("/LocalizationEditor/import")">
+                                        <img  src="@ModuleUtil.PathTo("/static/img/arrow_up.png")" alt="@Html.Translate("/LocalizationEditor/import")" />
+                                    </button>
+                                    <button type="button" class="csv-export image-button" title="@Html.Translate("/LocalizationEditor/export")">
+                                        <img  src="@ModuleUtil.PathTo("/static/img/page_excel.png")" alt="@Html.Translate("/LocalizationEditor/export")" />
+                                    </button>
+                                    <a class="hidden csv-export-datalink" download="translations.txt"></a>
+                                </td>
+                            </tr>
+                            
+                        }
+                    </table>
+                    
+                    
+                    <button type="button" class="undo-all">@Html.Translate("/LocalizationEditor/undoall")</button>
+                    <button type="submit">@Html.Translate("/LocalizationEditor/save")</button>
+                }
+
+            </div>
+        </div>
+
+    </body>
+</html>

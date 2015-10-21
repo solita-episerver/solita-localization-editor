@@ -1,0 +1,1282 @@
+<languages>
+  <language id="en" name="English">
+    <common>
+      <sitename>myCompany</sitename>
+      <languagemenufi>Suomi</languagemenufi>
+      <languagemenusv>Svenska</languagemenusv>
+      <languagemenuen>English</languagemenuen>
+      <languagemenuru>Russian</languagemenuru>
+      <languagemenuda>Danish</languagemenuda>
+      <languagemenude>German</languagemenude>
+      <languagemenupl>Polish</languagemenupl>
+      <languagemenucs>Czech</languagemenucs>
+      <languagemenuzh>Chinese</languagemenuzh>
+      <languagemenuno>Norwegian</languagemenuno>
+      <languagemenunb>Norwegian</languagemenunb>
+      <vote>Answer</vote>
+      <showmore>Show more</showmore>
+      <showless>Show less</showless>
+      <ie8notificationheader>Your Internet browser is not up to date.</ie8notificationheader>
+      <ie8notificationintroductiontext>The MyCompanyi-service does not function with the Internet Explorer 8 browser you are using. Upload an alternative browser or update a newer version of IE8.</ie8notificationintroductiontext>
+      <ie8notificationclosewindow>Close window</ie8notificationclosewindow>
+      <ie8notificationbottomtext>If you close this window please notice that your experience is not optimal due to the browser you are using.</ie8notificationbottomtext>
+      <recipientinformation>Recipient information</recipientinformation>
+      <requiredfield>Required field</requiredfield>
+      <fillrequiredfields>Fill required fields</fillrequiredfields>
+      <next>Seuraava</next>
+      <previous>Edellinen</previous>
+      <view>View</view>
+      <choose>Choose</choose>
+      <save>Save</save>
+      <continue>Jatka</continue>
+      <cancel>Cancel</cancel>
+      <cancelediting>Peruuta muokkaus</cancelediting>
+      <close>Close</close>
+      <clear>Empty</clear>
+      <back>Back</back>
+      <change>Change</change>
+      <update>Update</update>
+      <edit>Edit</edit>
+      <remove>Remove</remove>
+      <send>Send</send>
+      <sending>Sending</sending>
+      <tryagain>Try again</tryagain>
+      <disclaimer>Disclaimer</disclaimer>
+      <currentissues>Hot topics</currentissues>
+      <readmore>Read more</readmore>
+      <participateincustomersurvey>Answer</participateincustomersurvey>
+      <declinecustomersurvey>OK</declinecustomersurvey>
+      <print>Print</print>
+      <rssfeed>RSS</rssfeed>
+      <todaylowercase>today</todaylowercase>
+      <weeklowercase>week</weeklowercase>
+      <vat>ALV</vat>
+    </common>
+    <social>
+      <share>SHARE</share>
+    </social>
+    <forms>
+      <required>Required field</required>
+      <formhaserrors>Error in form</formhaserrors>
+      <unallowedfileextension>File type not allowed</unallowedfileextension>
+      <attachment>Attachment (PDF, JPG, TXT)</attachment>
+      <browse>Browse</browse>
+      <choosefile>Choose file</choosefile>
+      <attachmentsize>Maximum file size is 4 MB</attachmentsize>
+      <checkfield>Tarkista kenttä</checkfield>
+    </forms>
+    <location>
+      <contactinformation>Contact information</contactinformation>
+      <openinghours>Opening hours</openinghours>
+      <openinghoursmondaytofriday>Monday - Friday</openinghoursmondaytofriday>
+      <openinghourssaturday>Saturday</openinghourssaturday>
+      <openinghourssunday>Sunday</openinghourssunday>
+      <services>Services</services>
+      <showonmap>Show on map</showonmap>
+      <closemap>Close map</closemap>
+      <nolocationsfound>Sorry, there are no restaurants nearby.</nolocationsfound>
+    </location>
+    <locationlistblock>
+      <alllocations>All</alllocations>
+      <choosecity>Choose city</choosecity>
+    </locationlistblock>
+    <locationlistgadget>
+      <myrestaurants>My restaurant</myrestaurants>
+    </locationlistgadget>
+    <search>
+      <search>Search</search>
+      <searchproducts>Search products</searchproducts>
+      <found>Found</found>
+      <results>results</results>
+      <showmore>Show more</showmore>
+      <showall>Show all</showall>
+      <navigateto>Go to page...</navigateto>
+      <freetext>Free text search</freetext>
+      <helptext>Use text search or filter results</helptext>
+      <choosecategories>Choose categories</choosecategories>
+      <choosemethods>Choose methods</choosemethods>
+      <choosediets>Choose diets</choosediets>
+      <frozengoods>Frozen goods</frozengoods>
+      <freshgoods>Fresh goods</freshgoods>
+      <clearfilters>Clear search filters</clearfilters>
+      <moretags>More...</moretags>
+    </search>
+    <navigation>
+      <selectsection>Select section</selectsection>
+      <contact>Contact</contact>
+    </navigation>
+    <wayfinder>
+      <wayfindertext>You are currently browsing the international site. Would you like to change location?</wayfindertext>
+      <wayfinderlinktext>Click here</wayfinderlinktext>
+      <dismiss>Dismiss</dismiss>
+    </wayfinder>
+    <recipe>
+      <showrecipe>Show ingredients</showrecipe>
+      <ingredients>Ingredients</ingredients>
+      <instructions>Directions</instructions>
+    </recipe>
+    <user>
+      <login>Login</login>
+      <loginhere>Log in here</loginhere>
+      <logoff>Log out</logoff>
+      <logofflowercase>kirjaudu ulos</logofflowercase>
+      <logonheader>Login</logonheader>
+      <name>Name</name>
+      <firstname>First name</firstname>
+      <lastname>Last name</lastname>
+      <address>Address</address>
+      <postcode>Post code</postcode>
+      <postoffice>Post office</postoffice>
+      <city>City</city>
+      <country>Country</country>
+      <company>Company</company>
+      <email>E-mail</email>
+      <phone>Phone</phone>
+      <password>Password</password>
+      <confirmpassword>Confirm password</confirmpassword>
+      <passwordsdonotmatch>Passwords do not match</passwordsdonotmatch>
+      <passwordminlength>Password must be at least {0} characters long</passwordminlength>
+      <rememberme>Remember me</rememberme>
+      <termsandconditions>Terms and conditions</termsandconditions>
+      <marketing>Marketing</marketing>
+      <accepttermsandconditions>Accept terms and conditions</accepttermsandconditions>
+      <acceptmarketing>I want to receive marketing messages</acceptmarketing>
+      <signuplink>New user</signuplink>
+      <resetpasswordlink>Forgot password?</resetpasswordlink>
+      <passwordresetemailsent>Password reset email sent</passwordresetemailsent>
+      <passwordresetsuccessfully>Password reset successfully</passwordresetsuccessfully>
+      <signup>Registration</signup>
+      <signoutlink>Sign out</signoutlink>
+      <signupconfirmheader>Confirm sign up</signupconfirmheader>
+      <loginerror>Incorrect username or password</loginerror>
+      <usernamealreadyinuse>Username already in use</usernamealreadyinuse>
+      <emailalreadyinuse>Email address already in use</emailalreadyinuse>
+      <emailnotfound>Email address not found</emailnotfound>
+      <haveyoualreadyregistered>Have you registered already?</haveyoualreadyregistered>
+      <ihavealreadyregistered>I have already registered</ihavealreadyregistered>
+      <ihaventregisteredyet>I haven't registered yet</ihaventregisteredyet>
+      <termsnotaccepted>Please, accept the service terms</termsnotaccepted>
+      <incorrectemailverificationcode>Incorrect email verification code</incorrectemailverificationcode>
+      <incorrectemail>Incorrect email</incorrectemail>
+      <incorrectphonenumber>Incorrect phone number</incorrectphonenumber>
+      <incorrectpostalcode>Incorrect post code</incorrectpostalcode>
+    </user>
+    <product>
+      <ingredients>Ingredients</ingredients>
+      <productcode>Product number</productcode>
+      <cncode>CN code</cncode>
+      <weight>Weight</weight>
+      <countryoforigin>Country of origin</countryoforigin>
+      <qualitycertificates>Quality certificates</qualitycertificates>
+      <eancode>EAN code</eancode>
+      <pickuplocation>Pick up location</pickuplocation>
+      <pralines>Pralines</pralines>
+      <showpralines>Show pralines</showpralines>
+      <hidepralines>Hide pralines</hidepralines>
+      <selectproductgroup>Select product group</selectproductgroup>
+      <showproductdetails>Show product information</showproductdetails>
+      <hideproductdetails>Hide product information</hideproductdetails>
+      <bakinginstructions>Baking instructions</bakinginstructions>
+      <productinformation>Product information</productinformation>
+      <salesunit>Sales unit</salesunit>
+      <pieces>Pieces</pieces>
+      <piecespercase>Pieces per case</piecespercase>
+      <netweight>Net weight</netweight>
+      <grossweight>Gross weight</grossweight>
+      <casedimensions>Case dimensions</casedimensions>
+      <eurpallet>EUR-pallet</eurpallet>
+      <casespereurpallet>Cases per </casespereurpallet>
+      <includingPallet>(including pallet)</includingPallet>
+      <palletheight>Pallet height</palletheight>
+    </product>
+    <restaurantpage>
+      <addtofavorites>Add to favorites</addtofavorites>
+      <removefromfavorites>Remove from favorites</removefromfavorites>
+      <feedback>Feedback</feedback>
+      <restaurantarticles>Restaurant specific info</restaurantarticles>
+      <feedbackcontent>Feedback</feedbackcontent>
+      <name>Name</name>
+      <email>Email</email>
+      <submitfeedback>Send feedback</submitfeedback>
+      <thankyouforyourfeedback>Thank you for your feedback</thankyouforyourfeedback>
+      <yourfeedbackisimportant>Your feedback is important to us</yourfeedbackisimportant>
+      <returntorestaurant>Return to the restaurant page</returntorestaurant>
+      <searchrestaurants>Search restaurants</searchrestaurants>
+    </restaurantpage>
+    <restaurantmenu>
+      <restaurantmenus>Restaurant menus</restaurantmenus>
+      <favorite>Favourite</favorite>
+      <location>Location</location>
+      <changeaddress>Change address</changeaddress>
+      <favoriterestaurants>Your favorite restaurant</favoriterestaurants>
+      <restaurantsnearby>Restaurants nearby</restaurantsnearby>
+      <norestaurants>No restaurants</norestaurants>
+      <unabletolocate>Unable to locate</unabletolocate>
+      <viewrestaurantspage>Go to restaurant page</viewrestaurantspage>
+      <availabletoday>Available today</availabletoday>
+      <availableforweek>Available this week</availableforweek>
+      <filteraccordingtodiet>Filter according to your diet</filteraccordingtodiet>
+      <subscribemenu>Subscribe lunch menu</subscribemenu>
+      <subscribelunchmenu>Subscribe lunch menu</subscribelunchmenu>
+      <printmenu>Print lunch menu</printmenu>
+      <showonly>Show only</showonly>
+      <hide>Hide</hide>
+      <showentireweek>Show this week</showentireweek>
+      <showonlytoday>Show only today</showonlytoday>
+      <shownextweek>Show next week</shownextweek>
+      <previousweek>Previous week</previousweek>
+      <nextweek>Next week</nextweek>
+      <printlunchlistforweek>Print lunchlist for this week</printlunchlistforweek>
+      <printlunchlistfortoday>Print lunchlist for today</printlunchlistfortoday>
+      <menuwithproductdatasheet>Menu with product information</menuwithproductdatasheet>
+      <orderselectionlinktext>Go to take away offering page</orderselectionlinktext>
+      <nomenuavailable>No menu available</nomenuavailable>
+      <nolunchservice>No lunch</nolunchservice>
+    </restaurantmenu>
+    <orderpage>
+      <orderforms>Order forms</orderforms>
+      <products>Products</products>
+      <pc>pc</pc>
+      <buy>Buy</buy>
+      <productstoshoppingcart>Add products to your shopping cart</productstoshoppingcart>
+      <seeproductdatasheet>View product information</seeproductdatasheet>
+      <addedtoshoppingcart>Added to shopping cart</addedtoshoppingcart>
+      <shoppingcart>Shopping cart</shoppingcart>
+      <selectproductquantities>Select the amount of products</selectproductquantities>
+      <product>Product</product>
+      <quantity>Quantity</quantity>
+      <price>Price</price>
+      <sum>Sum</sum>
+      <total>Total</total>
+      <pricesincludevat>Prices include VAT</pricesincludevat>
+      <customerinformation>Contact information</customerinformation>
+      <additionalinformation>Additional information</additionalinformation>
+      <writeyourmessage>Write your message</writeyourmessage>
+      <pickupdate>Pickup date</pickupdate>
+      <iaccept>I accept</iaccept>
+      <thetermsandconditions>the terms and conditions</thetermsandconditions>
+      <ordersummary>Order summary</ordersummary>
+      <pleasecheckyourorder>Please check your order</pleasecheckyourorder>
+      <order>Order</order>
+      <orderthankyou>Thank you for your order</orderthankyou>
+      <orderhasbeensent>Your order has been sent</orderhasbeensent>
+    </orderpage>
+    <orderacknowledgementemail>
+      <ordersummary>Order summary</ordersummary>
+      <orderedproducts>Products</orderedproducts>
+      <orderpickupdate>Order pickup date is</orderpickupdate>
+    </orderacknowledgementemail>
+    <commerceadmintool>
+      <warehouse>Warehouse</warehouse>
+      <status>Status</status>
+      <createdfrom>Created from</createdfrom>
+      <createdto>Created to</createdto>
+      <searchshipments>Search shipments</searchshipments>
+      <download>Download</download>
+      <markasshipped>Mark as shipped</markasshipped>
+      <orderprocessing>Order processing</orderprocessing>
+      <markasshippedconfirmation>Are you sure you want mark the orders as shipped?</markasshippedconfirmation>
+      <mark>Mark</mark>
+      <donotmark>Do not mark</donotmark>
+    </commerceadmintool>
+    <shopcheckout>
+      <shippingcosts>Toimituskulut</shippingcosts>
+      <ordercountrynotavailable>Tilaaminen ei valitettavasti ole mahdollista tietoihisi määritetystä maasta.</ordercountrynotavailable>
+      <movetomypage>Siirry omiin tietoihin</movetomypage>
+      <orderingnotavailablefromcurrentaccount>Et ole kirjautunut MymyCompany-tunnuksilla, tilaaminen on estetty.</orderingnotavailablefromcurrentaccount>
+      <ordertotalexclvat>Kokonaishinta ilman ALV</ordertotalexclvat>
+      <ordertotal>Tilauksen kokonaishinta</ordertotal>
+    </shopcheckout>
+    <mypage>
+      <productinformationnotavailable>Tuotetietoja ei saatavilla</productinformationnotavailable>
+      <shippingmethodnotavailable>Toimitustavan tietoja ei saatavilla</shippingmethodnotavailable>
+    </mypage>
+    <giftingshopcheckout>
+      <chooseagift>Valitse lahja</chooseagift>
+      <packaging>Paketointi</packaging>
+      <owninformation>Omat tiedot</owninformation>
+    </giftingshopcheckout>
+    <meetings>
+      <backtolocationresults>Takaisin listaukseen</backtolocationresults>
+      <nolocationsearchresults>Ei hakutuloksia</nolocationsearchresults>
+      <maxnpersons>Max. {0} hlöä</maxnpersons>
+      <roomstitle>Tilat</roomstitle>
+      <directionstitle>Sijainti ja yhteydet</directionstitle>
+      <calendartitle>Kalenteri</calendartitle>
+      <calendardaytitle>Päivä</calendardaytitle>
+      <calendarweektitle>Viikko</calendarweektitle>
+      <book>Varaa</book>
+      <createbookingrequest>Tee varauspyyntö</createbookingrequest>
+      <parkingslots>Parkkipaikat</parkingslots>
+      <company>Yritys</company>
+      <CustomerName>Tilaajan nimi</CustomerName>
+      <ordererEmail>Tilaajan sähköposti</ordererEmail>
+      <ordererPhone>Tilaajan puhelinnumero</ordererPhone>
+      <HostOfTheEvent>Tilaisuuden isäntä</HostOfTheEvent>
+      <HostPhone>Isännän puhelinnumero</HostPhone>
+      <AdditionalWishes>Lisätoiveet</AdditionalWishes>
+      <CostCenter>Kustannuspaikka</CostCenter>
+      <CustomerNumber>Asiakasnumero</CustomerNumber>
+      <InvoicingReference>Laskun viite</InvoicingReference>
+      <PaymentMethod>Maksutapa</PaymentMethod>
+      <Invoice>Laskulla</Invoice>
+      <PayInRestaurant>Maksu ravintolassa</PayInRestaurant>
+      <BookerEmailMarketingAllowed>Sähköpostimarkkinointi sallittu</BookerEmailMarketingAllowed>
+      <Yes>Kyllä</Yes>
+      <No>Ei</No>
+      <OwnNotes>Omat muistiinpanot</OwnNotes>
+    </meetings>
+  </language>
+  <language id="de" name="Deutsch">
+    <common>
+      <sitename>myCompany</sitename>
+      <languagemenufi>Suomi</languagemenufi>
+      <languagemenusv>Svenska</languagemenusv>
+      <languagemenuen>English</languagemenuen>
+      <languagemenuru>Russian</languagemenuru>
+      <languagemenuda>Danish</languagemenuda>
+      <languagemenude>German</languagemenude>
+      <languagemenupl>Polish</languagemenupl>
+      <languagemenucs>Czech</languagemenucs>
+      <languagemenuzh>Chinese</languagemenuzh>
+      <languagemenuno>Norwegian</languagemenuno>
+      <languagemenunb>Norwegian</languagemenunb>
+      <showmore>Mehr anzeigen</showmore>
+      <showless>Kriterien Kriterien</showless>
+      <recipientinformation>Empfängerinformationen</recipientinformation>
+      <requiredfield>Pflichtfeld</requiredfield>
+      <fillrequiredfields>Füllen Pflichtfelder</fillrequiredfields>
+      <next>Weiterlesen</next>
+      <previous>Vorher</previous>
+      <view>Ansicht</view>
+      <choose>Wählen</choose>
+      <save>Speichern</save>
+      <continue>Jatka</continue>
+      <cancel>Abbrechen</cancel>
+      <cancelediting>Peruuta muokkaus</cancelediting>
+      <close>Schließen</close>
+      <clear>Leer</clear>
+      <back>Zurück</back>
+      <change>Veränderung</change>
+      <update>Aktualisierung</update>
+      <edit>Bearbeiten</edit>
+      <remove>Entfernen</remove>
+      <send>Senden</send>
+      <sending>Versendung</sending>
+      <tryagain>Versuchen Sie es erneut</tryagain>
+      <disclaimer>Haftungsausschluss</disclaimer>
+      <currentissues>Aktuelle Themen</currentissues>
+      <readmore>Weiterlesen</readmore>
+      <declinecustomersurvey>OK</declinecustomersurvey>
+      <rssfeed>RSS</rssfeed>
+      <todaylowercase>tänään</todaylowercase>
+      <weeklowercase>viikko</weeklowercase>
+      <vat>ALV</vat>
+    </common>
+    <forms>
+      <required>Pflichtfeld</required>
+      <formhaserrors>Fehler in der Form</formhaserrors>
+      <unallowedfileextension>Dateityp nicht erlaubt</unallowedfileextension>
+      <attachment>Anhang (PDF, JPG, TXT)</attachment>
+      <browse>Blättern</browse>
+      <choosefile>Datei auswählen</choosefile>
+      <attachmentsize>Die maximale Dateigröße beträgt 4 MB</attachmentsize>
+      <checkfield>Tarkista kenttä</checkfield>
+    </forms>
+    <search>
+      <search>Suche</search>
+      <searchproducts>Suche nach Produkten</searchproducts>
+      <found>Gefunden</found>
+      <results>Ergebnisse</results>
+      <showmore>Mehr anzeigen</showmore>
+      <showall>Alle anzeigen</showall>
+      <navigateto>Gehe zu Seite...</navigateto>
+      <freetext>Freitextsuche</freetext>
+      <helptext>Verwenden Sie Textsuche oder Filter Ergebnisse</helptext>
+      <choosecategories>Kategorien wählen</choosecategories>
+      <choosemethods>Methode wählen</choosemethods>
+      <frozengoods>Tiefkühlkost</frozengoods>
+      <freshgoods>Frischwaren</freshgoods>
+      <clearfilters>Suchfilter löschen</clearfilters>
+      <moretags>Mehr...</moretags>
+    </search>
+    <navigation>
+      <selectsection>Wählen Abschnitt</selectsection>
+    </navigation>
+    <user>
+      <logofflowercase>kirjaudu ulos</logofflowercase>
+    </user>
+    <product>
+      <ingredients>Ingredients</ingredients>
+      <productcode>Product number</productcode>
+      <cncode>CN code</cncode>
+      <weight>Weight</weight>
+      <countryoforigin>Country of origin</countryoforigin>
+      <qualitycertificates>Quality certificates</qualitycertificates>
+      <eancode>EAN code</eancode>
+      <pickuplocation>Pick up location</pickuplocation>
+      <pralines>Pralines</pralines>
+      <showpralines>Show pralines</showpralines>
+      <hidepralines>Hide pralines</hidepralines>
+      <selectproductgroup>Produktgruppe wählen</selectproductgroup>
+      <showproductdetails>Show product information</showproductdetails>
+      <hideproductdetails>Hide product information</hideproductdetails>
+      <bakinginstructions>Baking instructions</bakinginstructions>
+      <productinformation>Product information</productinformation>
+      <salesunit>Sales unit</salesunit>
+      <pieces>Pieces</pieces>
+      <piecespercase>Pieces per case</piecespercase>
+      <netweight>Net weight</netweight>
+      <grossweight>Gross weight</grossweight>
+      <casedimensions>Case dimensions</casedimensions>
+      <eurpallet>EUR-pallet</eurpallet>
+      <casespereurpallet>Cases per </casespereurpallet>
+      <includingPallet>(including pallet)</includingPallet>
+      <palletheight>Pallet height</palletheight>
+    </product>
+    <commerceadmintool>
+      <warehouse>Varasto</warehouse>
+      <status>Tila</status>
+      <createdfrom>Luotu alkaen</createdfrom>
+      <createdto>Luotu viimeistään</createdto>
+      <searchshipments>Hae tilauksia</searchshipments>
+      <download>Lataa</download>
+      <markasshipped>Merkkaa lähetetyksi</markasshipped>
+      <orderprocessing>Tilausten käsittely</orderprocessing>
+      <markasshippedconfirmation>Haluatko varmasti merkata tilaukset lähetetyksi?</markasshippedconfirmation>
+      <mark>Merkkaa</mark>
+      <donotmark>Älä merkkaa</donotmark>
+    </commerceadmintool>
+    <shopcheckout>
+      <shippingcosts>Toimituskulut</shippingcosts>
+      <ordercountrynotavailable>Tilaaminen ei valitettavasti ole mahdollista tietoihisi määritetystä maasta.</ordercountrynotavailable>
+      <movetomypage>Siirry omiin tietoihin</movetomypage>
+      <orderingnotavailablefromcurrentaccount>Et ole kirjautunut MymyCompany-tunnuksilla, tilaaminen on estetty.</orderingnotavailablefromcurrentaccount>
+      <ordertotalexclvat>Kokonaishinta ilman ALV</ordertotalexclvat>
+      <ordertotal>Tilauksen kokonaishinta</ordertotal>
+    </shopcheckout>
+    <mypage>
+      <productinformationnotavailable>Tuotetietoja ei saatavilla</productinformationnotavailable>
+      <shippingmethodnotavailable>Toimitustavan tietoja ei saatavilla</shippingmethodnotavailable>
+    </mypage>
+    <giftingshopcheckout>
+      <chooseagift>Valitse lahja</chooseagift>
+      <packaging>Paketointi</packaging>
+      <owninformation>Omat tiedot</owninformation>
+    </giftingshopcheckout>
+    <meetings>
+      <backtolocationresults>Takaisin listaukseen</backtolocationresults>
+      <nolocationsearchresults>Ei hakutuloksia</nolocationsearchresults>
+      <maxnpersons>Max. {0} hlöä</maxnpersons>
+      <roomstitle>Tilat</roomstitle>
+      <directionstitle>Sijainti ja yhteydet</directionstitle>
+      <calendartitle>Kalenteri</calendartitle>
+      <calendardaytitle>Päivä</calendardaytitle>
+      <calendarweektitle>Viikko</calendarweektitle>
+      <book>Varaa</book>
+      <createbookingrequest>Tee varauspyyntö</createbookingrequest>
+      <parkingslots>Parkkipaikat</parkingslots>
+      <company>Yritys</company>
+      <CustomerName>Tilaajan nimi</CustomerName>
+      <ordererEmail>Tilaajan sähköposti</ordererEmail>
+      <ordererPhone>Tilaajan puhelinnumero</ordererPhone>
+      <HostOfTheEvent>Tilaisuuden isäntä</HostOfTheEvent>
+      <HostPhone>Isännän puhelinnumero</HostPhone>
+      <AdditionalWishes>Lisätoiveet</AdditionalWishes>
+      <CostCenter>Kustannuspaikka</CostCenter>
+      <CustomerNumber>Asiakasnumero</CustomerNumber>
+      <InvoicingReference>Laskun viite</InvoicingReference>
+      <PaymentMethod>Maksutapa</PaymentMethod>
+      <Invoice>Laskulla</Invoice>
+      <PayInRestaurant>Maksu ravintolassa</PayInRestaurant>
+      <BookerEmailMarketingAllowed>Sähköpostimarkkinointi sallittu</BookerEmailMarketingAllowed>
+      <Yes>Kyllä</Yes>
+      <No>Ei</No>
+      <OwnNotes>Omat muistiinpanot</OwnNotes>
+    </meetings>
+  </language>
+  <language id="sv" name="svenska">
+    <common>
+      <sitename>myCompany</sitename>
+      <languagemenufi>Suomi</languagemenufi>
+      <languagemenusv>Svenska</languagemenusv>
+      <languagemenuen>English</languagemenuen>
+      <languagemenuru>Russian</languagemenuru>
+      <languagemenuda>Danish</languagemenuda>
+      <languagemenude>German</languagemenude>
+      <languagemenupl>Polish</languagemenupl>
+      <languagemenucs>Czech</languagemenucs>
+      <languagemenuzh>Chinese</languagemenuzh>
+      <languagemenuno>Norwegian</languagemenuno>
+      <languagemenunb>Norwegian</languagemenunb>
+      <vote>Svara</vote>
+      <showmore>Visa mer</showmore>
+      <showless>Visa mindre</showless>
+      <ie8notificationheader>MyCompanyi-tjänsten fungerar inte med  Internet Explorer 8 -browsern du använder. Använd en alternativ browser eller uppdatera IE8 till en nyare version. </ie8notificationheader>
+      <ie8notificationintroductiontext>MyCompanyi-tjänsten fungerar inte med  Internet Explorer 8 -browsern du använder. Använd en alternativ browser eller uppdatera IE8 till en nyare version. </ie8notificationintroductiontext>
+      <ie8notificationclosewindow>Stäng fönstret</ie8notificationclosewindow>
+      <ie8notificationbottomtext>Genom att stänga det här fönstret godkänner du att din upplevelse av webbplatsen inte nödvändigtvis är den bästa möjliga.</ie8notificationbottomtext>
+      <requiredfield>Fältet är obligatoriskt</requiredfield>
+      <choose>Välj</choose>
+      <save>Spara</save>
+      <continue>Jatka</continue>
+      <cancel>Tillbaka</cancel>
+      <cancelediting>Peruuta muokkaus</cancelediting>
+      <close>Stäng</close>
+      <clear>Töm</clear>
+      <back>Tillbaka</back>
+      <change>Ändra</change>
+      <update>Uppdatera</update>
+      <edit>Ändra</edit>
+      <remove>Ta bort</remove>
+      <send>Skicka</send>
+      <tryagain>Försök igen</tryagain>
+      <disclaimer>Avstående</disclaimer>
+      <currentissues>Aktuellt</currentissues>
+      <readmore>Läs mera</readmore>
+      <participateincustomersurvey>Svara</participateincustomersurvey>
+      <declinecustomersurvey>OK</declinecustomersurvey>
+      <print>Skriv ut</print>
+      <printall>Skriv ut allt</printall>
+      <rssfeed>RSS</rssfeed>
+      <lunchlistpagesaveguide>Du har ändrat din meny, glöm inte att spara den uppe i högra hörnet.</lunchlistpagesaveguide>
+      <todaylowercase>tänään</todaylowercase>
+      <weeklowercase>viikko</weeklowercase>
+      <vat>ALV</vat>
+    </common>
+    <forms>
+      <required>Fältet är obligatoriskt</required>
+      <formhaserrors>Det finns fel i formuläret</formhaserrors>
+      <unallowedfileextension>Filtypen är inte tillåten</unallowedfileextension>
+      <attachment>Bilaga (PDF, JPG, TXT)</attachment>
+      <browse>Bläddra</browse>
+      <choosefile>Välj fil</choosefile>
+      <attachmentsize>Största möjliga filstorlek är 4 MB</attachmentsize>
+      <checkfield>Tarkista kenttä</checkfield>
+    </forms>
+    <location>
+      <contactinformation>Kontaktuppgifter</contactinformation>
+      <openinghours>Öppettider</openinghours>
+      <openinghoursmondaytofriday>Måndag - fredag</openinghoursmondaytofriday>
+      <openinghourssaturday>Lördag</openinghourssaturday>
+      <openinghourssunday>Söndag</openinghourssunday>
+      <services>Tjänster</services>
+      <showonmap>Visa på karta</showonmap>
+      <closemap>Stäng karta</closemap>
+      <nolocationsfound>Tyvärr hittade vi inga restauranger nära dig.</nolocationsfound>
+    </location>
+    <locationlistblock>
+      <alllocations>Alla</alllocations>
+      <choosecity>Välj en stad</choosecity>
+    </locationlistblock>
+    <locationlistgadget>
+      <myrestaurants>Min restaurang</myrestaurants>
+    </locationlistgadget>
+    <search>
+      <search>Sök</search>
+      <searchproducts>Sök produkter</searchproducts>
+      <found>Hittade</found>
+      <results>resultat</results>
+      <showmore>Visa mera</showmore>
+      <showall>Visa alla</showall>
+      <navigateto>Gå till sidan...</navigateto>
+      <freetext>Fritextsökning</freetext>
+      <helptext>Använd fritextsökning eller  filtrera resultat</helptext>
+      <choosecategories>Välj kategorier</choosecategories>
+      <choosemethods>Välj metoder</choosemethods>
+      <choosediets>Välj diet</choosediets>
+      <frozengoods>Frysvaror</frozengoods>
+      <freshgoods>Färska varor</freshgoods>
+      <clearfilters>Töm sökfilter</clearfilters>
+      <moretags>Mera…</moretags>
+    </search>
+    <navigation>
+      <selectsection>Välj sektionen</selectsection>
+      <contact>Kontakta oss</contact>
+    </navigation>
+    <wayfinder>
+      <wayfindertext>You are currently browsing the international site. Would you like to change location?</wayfindertext>
+      <wayfinderlinktext>Klicka här</wayfinderlinktext>
+    </wayfinder>
+    <recipe>
+      <showrecipe>Visa ingredienser</showrecipe>
+      <ingredients>Ingredienser</ingredients>
+      <instructions>Gör så här</instructions>
+    </recipe>
+    <user>
+      <login>Logga in</login>
+      <loginhere>Logga in här</loginhere>
+      <logoff>Logga ut</logoff>
+      <logofflowercase>kirjaudu ulos</logofflowercase>
+      <logonheader>Logga in</logonheader>
+      <name>Namn</name>
+      <firstname>Förnam</firstname>
+      <lastname>Efternamn</lastname>
+      <address>Gatuadress</address>
+      <postcode>Postnummer</postcode>
+      <postoffice>Postkontor</postoffice>
+      <country>Land</country>
+      <company>Företag</company>
+      <email>E-post</email>
+      <phone>Telefon</phone>
+      <password>Lösenord</password>
+      <confirmpassword>Bekräfta lösenord</confirmpassword>
+      <passwordsdonotmatch>Lösenorden matchar inte</passwordsdonotmatch>
+      <rememberme>Kom ihåg mig</rememberme>
+      <accepttermsandconditions>Acceptera villkor</accepttermsandconditions>
+      <acceptmarketing>Jag vill ta emot marknadsföringsmeddelanden</acceptmarketing>
+      <signuplink>Ny användare</signuplink>
+      <resetpasswordlink>Glömt lösenordet?</resetpasswordlink>
+      <signup>Registrering</signup>
+      <signoutlink>Logga ut</signoutlink>
+      <signupconfirmheader>Bekräfta registrering</signupconfirmheader>
+      <loginerror>Felaktigt användarnamn eller lösenord</loginerror>
+      <usernamealreadyinuse>Användarnamn redan i bruk</usernamealreadyinuse>
+      <emailalreadyinuse>E-post redan i bruk</emailalreadyinuse>
+      <haveyoualreadyregistered>Är du redan registrerad?</haveyoualreadyregistered>
+      <termsnotaccepted>Var vänlig och acceptera servicevillkor</termsnotaccepted>
+      <incorrectemailverificationcode>Felaktig kontrollkod</incorrectemailverificationcode>
+    </user>
+    <product>
+      <ingredients>Innehåll</ingredients>
+      <productcode>Produktnummer</productcode>
+      <cncode>CN-kod</cncode>
+      <weight>Vikt</weight>
+      <countryoforigin>Tillverkningsland</countryoforigin>
+      <qualitycertificates>Ursprungsland</qualitycertificates>
+      <eancode>EAN-kod</eancode>
+      <pickuplocation>Avhämtningsplats</pickuplocation>
+      <pralines>Praliner</pralines>
+      <showpralines>Visa praliner</showpralines>
+      <hidepralines>Göm praliner</hidepralines>
+      <selectproductgroup>Välj produktgrupp</selectproductgroup>
+      <showproductdetails>Visa produktinformation</showproductdetails>
+      <hideproductdetails>Göm produktinformation</hideproductdetails>
+      <bakinginstructions>Anvisning för uppvärmning</bakinginstructions>
+      <productinformation>Produktinformation</productinformation>
+      <salesunit>Försäljningsparti</salesunit>
+      <pieces>Styck</pieces>
+      <piecespercase>Styck/parti</piecespercase>
+      <netweight>Nettovikt</netweight>
+      <grossweight>Bruttovikt</grossweight>
+      <casedimensions>Partiets mått</casedimensions>
+      <eurpallet>EUR-pallet</eurpallet>
+      <casespereurpallet>Partier per </casespereurpallet>
+      <includingPallet>(inklusive pallet)</includingPallet>
+      <palletheight>Pallet-höjd</palletheight>
+    </product>
+    <restaurantpage>
+      <addtofavorites>Markera som favorit</addtofavorites>
+      <removefromfavorites>Ta bort från favoriter</removefromfavorites>
+      <feedback>Feedback</feedback>
+      <restaurantarticles>Restaurangspesifikt</restaurantarticles>
+      <feedbackcontent>Feedback</feedbackcontent>
+      <name>Namn</name>
+      <email>E-post</email>
+      <submitfeedback>Lämna feedback</submitfeedback>
+      <thankyouforyourfeedback>Tack för din feedback</thankyouforyourfeedback>
+      <yourfeedbackisimportant>Vi värderar högt din feedback</yourfeedbackisimportant>
+      <returntorestaurant>Tillbaka till restaurangens hemsida</returntorestaurant>
+      <searchrestaurants>Sök restaurang</searchrestaurants>
+    </restaurantpage>
+    <restaurantmenu>
+      <favorite>Favorit</favorite>
+      <location>Din position</location>
+      <changeaddress>Ändra adressen</changeaddress>
+      <favoriterestaurants>Din favoritrestaurang</favoriterestaurants>
+      <restaurantsnearby>Restauranger nära dig</restaurantsnearby>
+      <norestaurants>Inga restauranger kan hittas</norestaurants>
+      <unabletolocate>Lokalisering misslyckades</unabletolocate>
+      <viewrestaurantspage>Se restaurangens hemsida</viewrestaurantspage>
+      <availabletoday>I dag erbjuds</availabletoday>
+      <availableforweek>Denna vecka erbjuds</availableforweek>
+      <filteraccordingtodiet>Filtrera enlig diet</filteraccordingtodiet>
+      <subscribemenu>Beställ meny</subscribemenu>
+      <subscribelunchmenu>Beställ lunchmeny</subscribelunchmenu>
+      <printmenu>Skriv ut meny</printmenu>
+      <showonly>Visa bara</showonly>
+      <hide>Göm</hide>
+      <showentireweek>Visa denna vecka</showentireweek>
+      <showonlytoday>Visa endast i dag</showonlytoday>
+      <shownextweek>Visa nästa vecka</shownextweek>
+      <previousweek>Förra veckan</previousweek>
+      <nextweek>Nästa vecka</nextweek>
+      <printlunchlistforweek>Skriv ut lunchmeny för denna vecka</printlunchlistforweek>
+      <printlunchlistfortoday>Skriv ut lunchmeny för i dag</printlunchlistfortoday>
+      <menuwithproductdatasheet>Skriv ut lunchmeny för denna vecka</menuwithproductdatasheet>
+      <orderselectionlinktext>Gå till take away-erbjudande sidan</orderselectionlinktext>
+      <nomenuavailable>Meny ej tillgänglig</nomenuavailable>
+      <nolunchservice>Ingen lunch</nolunchservice>
+    </restaurantmenu>
+    <orderpage>
+      <orderforms>Beställningblanketter</orderforms>
+      <products>Produkter</products>
+      <pc>st</pc>
+      <buy>Köp</buy>
+      <productstoshoppingcart>Lägg produkt i varukorg</productstoshoppingcart>
+      <seeproductdatasheet>Se produktinformation</seeproductdatasheet>
+      <addedtoshoppingcart>Lagd i varukorg</addedtoshoppingcart>
+      <shoppingcart>Varukorg</shoppingcart>
+      <selectproductquantities>Välj produktantal</selectproductquantities>
+      <product>Produkt</product>
+      <quantity>Antal</quantity>
+      <price>Pris</price>
+      <sum>Summa</sum>
+      <total>Totalt</total>
+      <pricesincludevat>Pris inkluderar moms</pricesincludevat>
+      <customerinformation>Kundinformation</customerinformation>
+      <additionalinformation>Tilläggsinformation</additionalinformation>
+      <writeyourmessage>Skriv meddelande</writeyourmessage>
+      <pickupdate>Avhämtningsdatum</pickupdate>
+      <iaccept>Jag accepterar</iaccept>
+      <thetermsandconditions>beställningsvillkor</thetermsandconditions>
+      <ordersummary>Beställningssammandrag</ordersummary>
+      <pleasecheckyourorder>Var vänlig och kontrollera din beställning</pleasecheckyourorder>
+      <order>Beställning</order>
+      <orderthankyou>Tack för din beställning</orderthankyou>
+      <orderhasbeensent>Beställningen har skickats</orderhasbeensent>
+    </orderpage>
+    <orderacknowledgementemail>
+      <ordersummary>Beställningssammandrag</ordersummary>
+      <orderedproducts>Beställda produkter</orderedproducts>
+      <orderpickupdate>Beställningens avhämtningsdatum är</orderpickupdate>
+    </orderacknowledgementemail>
+    <commerceadmintool>
+      <warehouse>Varasto</warehouse>
+      <status>Tila</status>
+      <createdfrom>Luotu alkaen</createdfrom>
+      <createdto>Luotu viimeistään</createdto>
+      <searchshipments>Hae tilauksia</searchshipments>
+      <download>Lataa</download>
+      <markasshipped>Merkkaa lähetetyksi</markasshipped>
+      <orderprocessing>Tilausten käsittely</orderprocessing>
+      <markasshippedconfirmation>Haluatko varmasti merkata tilaukset lähetetyksi?</markasshippedconfirmation>
+      <mark>Merkkaa</mark>
+      <donotmark>Älä merkkaa</donotmark>
+    </commerceadmintool>
+    <shopcheckout>
+      <shippingcosts>Toimituskulut</shippingcosts>
+      <ordercountrynotavailable>Tilaaminen ei valitettavasti ole mahdollista tietoihisi määritetystä maasta.</ordercountrynotavailable>
+      <movetomypage>Siirry omiin tietoihin</movetomypage>
+      <orderingnotavailablefromcurrentaccount>Et ole kirjautunut MymyCompany-tunnuksilla, tilaaminen on estetty.</orderingnotavailablefromcurrentaccount>
+      <ordertotalexclvat>Kokonaishinta ilman ALV</ordertotalexclvat>
+      <ordertotal>Tilauksen kokonaishinta</ordertotal>
+    </shopcheckout>
+    <mypage>
+      <productinformationnotavailable>Tuotetietoja ei saatavilla</productinformationnotavailable>
+      <shippingmethodnotavailable>Toimitustavan tietoja ei saatavilla</shippingmethodnotavailable>
+    </mypage>
+    <giftingshopcheckout>
+      <chooseagift>Valitse lahja</chooseagift>
+      <packaging>Paketointi</packaging>
+      <owninformation>Omat tiedot</owninformation>
+    </giftingshopcheckout>
+    <meetings>
+      <backtolocationresults>Takaisin listaukseen</backtolocationresults>
+      <nolocationsearchresults>Ei hakutuloksia</nolocationsearchresults>
+      <maxnpersons>Max. {0} hlöä</maxnpersons>
+      <roomstitle>Tilat</roomstitle>
+      <directionstitle>Sijainti ja yhteydet</directionstitle>
+      <calendartitle>Kalenteri</calendartitle>
+      <calendardaytitle>Päivä</calendardaytitle>
+      <calendarweektitle>Viikko</calendarweektitle>
+      <book>Varaa</book>
+      <createbookingrequest>Tee varauspyyntö</createbookingrequest>
+      <parkingslots>Parkkipaikat</parkingslots>
+      <company>Yritys</company>
+      <CustomerName>Tilaajan nimi</CustomerName>
+      <ordererEmail>Tilaajan sähköposti</ordererEmail>
+      <ordererPhone>Tilaajan puhelinnumero</ordererPhone>
+      <HostOfTheEvent>Tilaisuuden isäntä</HostOfTheEvent>
+      <HostPhone>Isännän puhelinnumero</HostPhone>
+      <AdditionalWishes>Lisätoiveet</AdditionalWishes>
+      <CostCenter>Kustannuspaikka</CostCenter>
+      <CustomerNumber>Asiakasnumero</CustomerNumber>
+      <InvoicingReference>Laskun viite</InvoicingReference>
+      <PaymentMethod>Maksutapa</PaymentMethod>
+      <Invoice>Laskulla</Invoice>
+      <PayInRestaurant>Maksu ravintolassa</PayInRestaurant>
+      <BookerEmailMarketingAllowed>Sähköpostimarkkinointi sallittu</BookerEmailMarketingAllowed>
+      <Yes>Kyllä</Yes>
+      <No>Ei</No>
+      <OwnNotes>Omat muistiinpanot</OwnNotes>
+    </meetings>
+  </language>
+  <language id="fi" name="suomi">
+    <common>
+      <sitename>myCompany</sitename>
+      <languagemenufi>Suomi</languagemenufi>
+      <languagemenusv>Svenska</languagemenusv>
+      <languagemenuen>English</languagemenuen>
+      <languagemenuru>Russian</languagemenuru>
+      <languagemenuda>Danish</languagemenuda>
+      <languagemenude>German</languagemenude>
+      <languagemenupl>Polish</languagemenupl>
+      <languagemenucs>Czech</languagemenucs>
+      <languagemenuzh>Chinese</languagemenuzh>
+      <languagemenuno>Norwegian</languagemenuno>
+      <languagemenunb>Norwegian</languagemenunb>
+      <vote>Vastaa</vote>
+      <showmore>Näytä lisää</showmore>
+      <showless>Näytä vähemmän</showless>
+      <ie8notificationheader>Käyttämäsi internet-selain vaikuttaa vanhentuneelta.</ie8notificationheader>
+      <ie8notificationintroductiontext>MyCompanyi-palvelu toimii paremmin uudemmilla selainversioilla. Suosittelemme lataamaan vaihtoehtoisen selaimen tai päivittämään  Internet Explorerin uudempaan.</ie8notificationintroductiontext>
+      <ie8notificationclosewindow>Sulje ikkuna</ie8notificationclosewindow>
+      <ie8notificationbottomtext>Jos kuitenkin haluat jatkaa suoraan sivustollemme, huomioithan että sivut eivät välttämättä näy oikein nykyisellä selaimellasi. </ie8notificationbottomtext>
+      <recipientinformation>Vastaanottajan yhteystiedot</recipientinformation>
+      <requiredfield>Kenttä on pakollinen. Tarkista tiedot.</requiredfield>
+      <fillrequiredfields>Syötä puuttuvat tiedot</fillrequiredfields>
+      <next>Seuraava</next>
+      <previous>Edellinen</previous>
+      <view>Katso</view>
+      <choose>Valitse</choose>
+      <save>Tallenna</save>
+      <saving>Tallennetaan</saving>
+      <continue>Jatka</continue>
+      <cancel>Peruuta</cancel>
+      <cancelediting>Peruuta muokkaus</cancelediting>
+      <close>Sulje</close>
+      <clear>Tyhjennä</clear>
+      <back>Takaisin</back>
+      <change>Vaihda</change>
+      <update>Päivitä</update>
+      <edit>Muokkaa</edit>
+      <remove>Poista</remove>
+      <send>Lähetä</send>
+      <sending>Lähetetään</sending>
+      <tryagain>Yritä uudelleen</tryagain>
+      <loading>Ladataan</loading>
+      <disclaimer>Käyttöehdot</disclaimer>
+      <currentissues>Ajankohtaista</currentissues>
+      <readmore>Lue lisää</readmore>
+      <participateincustomersurvey>Vastaa</participateincustomersurvey>
+      <declinecustomersurvey>OK</declinecustomersurvey>
+      <print>Tulosta</print>
+      <printall>Tulosta kaikki</printall>
+      <rssfeed>RSS</rssfeed>
+      <lunchlistpagesaveguide>Muutettuasi päivämääriä, muista tallentaa sivu oikeasta yläkulmasta</lunchlistpagesaveguide>
+      <informationaboutcookies>Tietoa evästeistä</informationaboutcookies>
+      <returntofrontpage>palaa etusivulle</returntofrontpage>
+      <todaylowercase>tänään</todaylowercase>
+      <weeklowercase>viikko</weeklowercase>
+      <vat>ALV</vat>
+    </common>
+    <social>
+      <share>JAA</share>
+    </social>
+    <forms>
+      <required>Kenttä on pakollinen</required>
+      <formhaserrors>Lomakkeella on virheitä</formhaserrors>
+      <unallowedfileextension>Tiedostomuoto ei ole sallittu</unallowedfileextension>
+      <attachment>Liitetiedosto (PDF, JPG, TXT)</attachment>
+      <browse>Selaa</browse>
+      <choosefile>Valitse tiedosto</choosefile>
+      <attachmentsize>Suurin sallittu tiedostokoko on 4 MB</attachmentsize>
+      <checkfield>Tarkista kenttä</checkfield>
+    </forms>
+    <location>
+      <contactinformation>Yhteystiedot</contactinformation>
+      <openinghours>Aukioloajat</openinghours>
+      <openinghoursmondaytofriday>Maanantai - perjantai</openinghoursmondaytofriday>
+      <openinghourssaturday>Lauantai</openinghourssaturday>
+      <openinghourssunday>Sunnuntai</openinghourssunday>
+      <services>Palvelut</services>
+      <showonmap>Näytä kartalla</showonmap>
+      <closemap>Sulje kartta</closemap>
+      <nolocationsfound>Läheltäsi ei valitettavasti löytynyt ravintoloita.</nolocationsfound>
+    </location>
+    <locationlistblock>
+      <alllocations>Kaikki</alllocations>
+      <choosecity>Valitse kaupunki</choosecity>
+    </locationlistblock>
+    <locationlistgadget>
+      <myrestaurants>Ravintolani</myrestaurants>
+    </locationlistgadget>
+    <search>
+      <search>Hae</search>
+      <searchproducts>Hae tuotteita</searchproducts>
+      <searchsite>Hae sivustolta</searchsite>
+      <found>Löytyi </found>
+      <results>osumaa</results>
+      <searchresults>Hakutulokset</searchresults>
+      <noresults>Ei hakutuloksia</noresults>
+      <showmore>Näytä lisää</showmore>
+      <showall>Näytä kaikki</showall>
+      <navigateto>Siirry sivulle...</navigateto>
+      <freetext>Esim. tuotenimi, EAN tai tuotenumero</freetext>
+      <helptext>Käytä vapaahakua tai rajaa hakutuloksia</helptext>
+      <choosecategories>Valitse kategoriat</choosecategories>
+      <choosemethods>Valitse käyttötapa</choosemethods>
+      <choosediets>Valitse erityisruokavaliot</choosediets>
+      <frozengoods>Pakasteet</frozengoods>
+      <freshgoods>Muut</freshgoods>
+      <clearfilters>Tyhjennä valinnat</clearfilters>
+      <moretags>Lisää...</moretags>
+    </search>
+    <navigation>
+      <selectsection>Valitse osio</selectsection>
+      <frontpage>Etusivu</frontpage>
+      <contact>Ota yhteyttä</contact>
+    </navigation>
+    <wayfinder>
+      <wayfindertext>You are currently browsing the international site. Would you like to change location?</wayfindertext>
+      <wayfinderlinktext>Klikkaa tästä</wayfinderlinktext>
+      <dismiss>Dismiss</dismiss>
+    </wayfinder>
+    <recipe>
+      <showrecipe>Näytä tuoteseloste</showrecipe>
+      <ingredients>Ainekset</ingredients>
+      <instructions>Tee näin</instructions>
+    </recipe>
+    <user>
+      <login>Kirjaudu</login>
+      <loginhere>Kirjaudu sisään tästä</loginhere>
+      <logoff>Kirjaudu ulos</logoff>
+      <logofflowercase>kirjaudu ulos</logofflowercase>
+      <logonheader>Kirjaudu</logonheader>
+      <myinformation>Omat tietoni</myinformation>
+      <name>Nimi</name>
+      <firstname>Etunimi</firstname>
+      <lastname>Sukunimi</lastname>
+      <address>Katuosoite</address>
+      <postcode>Postinumero</postcode>
+      <postoffice>Postitoimipaikka</postoffice>
+      <city>Kaupunki</city>
+      <country>Maa</country>
+      <company>Yritys</company>
+      <email>Sähköpostiosoite</email>
+      <phone>Puhelinnumero</phone>
+      <password>Salasana</password>
+      <confirmpassword>Salasana uudestaan</confirmpassword>
+      <changepassword>Vaihda salasana</changepassword>
+      <passwordtooshort>Salasana on liian lyhyt</passwordtooshort>
+      <passwordsdonotmatch>Salasanat eivät täsmää</passwordsdonotmatch>
+      <passwordminlength>Salasanassa täytyy olla vähintään {0} merkkiä.</passwordminlength>
+      <rememberme>Muista minut</rememberme>
+      <termsandconditions>Käyttöehdot</termsandconditions>
+      <marketing>Markkinointilupa</marketing>
+      <accepttermsandconditions>Olen lukenut verkkopalvelun käyttöehdot ja hyväksyn ne.</accepttermsandconditions>
+      <acceptmarketing>Minulle saa lähettää markkinointiviestejä.</acceptmarketing>
+      <signuplink>Uusi käyttäjä</signuplink>
+      <resetpasswordlink>Unohtuiko salasana?</resetpasswordlink>
+      <passwordresetemailsent>Sähköposti salasanan vaihtoon lähetetty</passwordresetemailsent>
+      <passwordresetsuccessfully>Salasana vaihdettu onnistuneesti</passwordresetsuccessfully>
+      <signup>Rekisteröidy</signup>
+      <signoutlink>Kirjaudu ulos</signoutlink>
+      <signupconfirmheader>Rekisteröitymisen vahvistus</signupconfirmheader>
+      <loginerror>Virheellinen käyttäjätunnus tai salasana</loginerror>
+      <usernamealreadyinuse>Käyttäjätunnus on jo käytössä</usernamealreadyinuse>
+      <emailalreadyinuse>Sähköpostiosoite on jo käytössä</emailalreadyinuse>
+      <emailnotfound>Antamaasi sähköpostiosoitetta ei löydy. Varmista, että olet antanut oikean sähköpostiosoitteen ja vahvistanut rekisteröitymisen saamasi sähköpostin ohjeiden mukaan.</emailnotfound>
+      <haveyoualreadyregistered>Oletko jo rekisteröitynyt?</haveyoualreadyregistered>
+      <ihavealreadyregistered>Olen jo rekisteröitynyt</ihavealreadyregistered>
+      <ihaventregisteredyet>Minulla ei vielä ole käyttäjätunnuksia</ihaventregisteredyet>
+      <termsnotaccepted>Palvelun ehtoja ei ole hyväksytty</termsnotaccepted>
+      <incorrectemailverificationcode>Käyttämäsi vahvistuslinkki on vanhentunut tai käyttäjätunnus on jo aktivoitu. Palaa kampanjan etusivulle.</incorrectemailverificationcode>
+      <incorrectemail>Virheellinen sähköpostiosoite</incorrectemail>
+      <incorrectphonenumber>Virheellinen puhelinnumero</incorrectphonenumber>
+      <incorrectpostalcode>Virheellinen postinumero</incorrectpostalcode>
+    </user>
+    <product>
+      <ingredients>Ainesosat</ingredients>
+      <productcode>Tuotenumero</productcode>
+      <cncode>CN-koodi</cncode>
+      <weight>Paino</weight>
+      <countryoforigin>Valmistusmaa</countryoforigin>
+      <qualitycertificates>Laatusertifikaatit</qualitycertificates>
+      <eancode>EAN-tunnus</eancode>
+      <pickuplocation>Noutosijainti</pickuplocation>
+      <pralines>Konvehdit</pralines>
+      <showpralines>Näytä konvehdit</showpralines>
+      <hidepralines>Piilota konvehdit</hidepralines>
+      <selectproductgroup>Valitse tuoteryhmä</selectproductgroup>
+      <showproductdetails>Näytä tuotetiedot</showproductdetails>
+      <hideproductdetails>Piilota tuotetiedot</hideproductdetails>
+      <bakinginstructions>Sulatus/paisto-ohje</bakinginstructions>
+      <productinformation>Tuotetiedot</productinformation>
+      <salesunit>Myyntiyksikkö</salesunit>
+      <pieces>Myyntierän koko</pieces>
+      <piecespercase>Kpl per myyntierä</piecespercase>
+      <netweight>Nettopaino</netweight>
+      <grossweight>Bruttopaino</grossweight>
+      <casedimensions>Myyntierän mitat</casedimensions>
+      <eurpallet>EUR-lava</eurpallet>
+      <casespereurpallet>Myyntierää per EUR-lava</casespereurpallet>
+      <includingPallet>(sis. lava)</includingPallet>
+      <palletheight>Lavan korkeus</palletheight>
+      <productstext>Tuotteet</productstext>
+      <showalltext>Näytä kaikki</showalltext>
+      <showtext>Näytä</showtext>
+      <alltext>Kaikki</alltext>
+      <hello>Hei</hello>
+      <yourpreviousordercontainedthese>Näitä tilasit viimeksi</yourpreviousordercontainedthese>
+    </product>
+    <restaurantpage>
+      <addtofavorites>Lisää suosikiksi</addtofavorites>
+      <removefromfavorites>Poista suosikeista</removefromfavorites>
+      <feedback>Anna palautetta</feedback>
+      <restaurantarticles>Ravintolakohtaista</restaurantarticles>
+      <feedbackcontent>Palaute</feedbackcontent>
+      <name>Nimi</name>
+      <email>Sähköposti</email>
+      <submitfeedback>Lähetä palaute</submitfeedback>
+      <thankyouforyourfeedback>Kiitos palautteestasi</thankyouforyourfeedback>
+      <yourfeedbackisimportant>Saamamme palaute on meille ensiarvoisen tärkeää.</yourfeedbackisimportant>
+      <returntorestaurant>Palaa takaisin ravintolan sivulle</returntorestaurant>
+      <searchrestaurants>Hae ravintoloita</searchrestaurants>
+    </restaurantpage>
+    <restaurantmenu>
+      <restaurantmenus>Ravintolan ruokalistat</restaurantmenus>
+      <favorite>Suosikki</favorite>
+      <location>Sijantisi</location>
+      <changeaddress>Vaihda osoitetta</changeaddress>
+      <favoriterestaurants>Suosikki-ravintolasi</favoriterestaurants>
+      <restaurantsnearby>Ravintolat lähelläsi</restaurantsnearby>
+      <norestaurants>Ei ravintoloita</norestaurants>
+      <unabletolocate>Paikannus epäonnistui</unabletolocate>
+      <viewrestaurantspage>Siirry ravintolan sivulle</viewrestaurantspage>
+      <availabletoday>Tarjolla tänään</availabletoday>
+      <availableforweek>Tarjolla viikolla</availableforweek>
+      <filteraccordingtodiet>Rajaa ruokavaliosi mukaan</filteraccordingtodiet>
+      <subscribemenu>Tilaa lista</subscribemenu>
+      <subscribelunchmenu>Tilaa lounaslista</subscribelunchmenu>
+      <printmenu>Tulosta lista</printmenu>
+      <showonly>Näytä vain</showonly>
+      <hide>Älä näytä</hide>
+      <showentireweek>Näytä koko viikko</showentireweek>
+      <showonlytoday>Näytä vain tämä päivä</showonlytoday>
+      <shownextweek>Näytä seuraava viikko</shownextweek>
+      <previousweek>Edellinen viikko</previousweek>
+      <nextweek>Seuraava viikko</nextweek>
+      <printlunchlistforweek>Tulosta viikon lounaslista</printlunchlistforweek>
+      <printlunchlistfortoday>Tulosta päivän lounaslista</printlunchlistfortoday>
+      <menuwithproductdatasheet>Ruokalista tuoteselosteilla</menuwithproductdatasheet>
+      <orderselectionlinktext>Siirry tilausvalikoimaan</orderselectionlinktext>
+      <nomenuavailable>Ei ruokalistaa saatavilla</nomenuavailable>
+      <nolunchservice>Ei lounasta</nolunchservice>
+    </restaurantmenu>
+    <orderpage>
+      <orderforms>Tilauslomakkeet</orderforms>
+      <products>Tuotteet</products>
+      <pc>kpl</pc>
+      <buy>Osta</buy>
+      <productstoshoppingcart>Lisää tuotteita ostoskoriisi</productstoshoppingcart>
+      <seeproductdatasheet>Katso tarkemmat tuotetiedot</seeproductdatasheet>
+      <addedtoshoppingcart>Lisätty ostoskoriin</addedtoshoppingcart>
+      <shoppingcart>Ostoskori</shoppingcart>
+      <selectproductquantities>Valitse tuotteiden tilausmäärä</selectproductquantities>
+      <product>Tuote</product>
+      <quantity>Lukumäärä</quantity>
+      <price>Hinta</price>
+      <sum>Summa</sum>
+      <total>Yhteensä</total>
+      <pricesincludevat>Hinnat sisältävät ALV:n</pricesincludevat>
+      <customerinformation>Tilaajan tiedot</customerinformation>
+      <additionalinformation>Lisätietoja</additionalinformation>
+      <writeyourmessage>Kirjoita viestisi</writeyourmessage>
+      <pickupdate>Noutopäivämäärä</pickupdate>
+      <iaccept>Hyväksyn</iaccept>
+      <thetermsandconditions>tilaus- ja toimitusehdot</thetermsandconditions>
+      <ordersummary>Tilaustiedot</ordersummary>
+      <pleasecheckyourorder>Tarkista vielä tilauksesi</pleasecheckyourorder>
+      <order>Tilaa</order>
+      <orderthankyou>Kiitos tilauksestasi</orderthankyou>
+      <orderhasbeensent>Tilauksesi on lähetetty onnistuneesti, saat pian vahvistuksen sähköpostiisi.</orderhasbeensent>
+    </orderpage>
+    <orderacknowledgementemail>
+      <ordersummary>Tilauskooste</ordersummary>
+      <orderedproducts>Tilatut tuotteet </orderedproducts>
+      <orderpickupdate>Tilauksen noutopäivä on</orderpickupdate>
+    </orderacknowledgementemail>
+    <event>
+      <event>Tapahtuma</event>
+      <movetoeventcalendar>Siirry tapahtumakalenteriin</movetoeventcalendar>
+      <year>Vuosi</year>
+      <month>Kuukausi</month>
+      <eventtype>Tapahtumatyyppi</eventtype>
+      <movetoeventpage>Siirry tapahtuman sivulle</movetoeventpage>
+      <eventdatestitle>Tapahtuma-aika</eventdatestitle>
+      <starts>Alkaa</starts>
+      <ends>Päättyy</ends>
+    </event>
+    <commerceadmintool>
+      <warehouse>Varasto</warehouse>
+      <status>Tila</status>
+      <createdfrom>Luotu alkaen</createdfrom>
+      <createdto>Luotu viimeistään</createdto>
+      <searchshipments>Hae tilauksia</searchshipments>
+      <download>Lataa</download>
+      <markasshipped>Merkkaa lähetetyksi</markasshipped>
+      <orderprocessing>Tilausten käsittely</orderprocessing>
+      <markasshippedconfirmation>Haluatko varmasti merkata tilaukset lähetetyksi?</markasshippedconfirmation>
+      <mark>Merkkaa</mark>
+      <donotmark>Älä merkkaa</donotmark>
+    </commerceadmintool>
+    <commerceshoppingcart>
+      <shoppingcarttext>Ostoskori</shoppingcarttext>
+      <shoppingcartisempty>Ostoskori on tyhjä</shoppingcartisempty>
+      <addtocart>Lisää koriin</addtocart>
+      <adding>Lisätään</adding>
+      <addedtocart>lisätty koriin</addedtocart>
+      <productaddedtocart>Tuote lisätty koriin</productaddedtocart>
+      <productnum>Tuotenro</productnum>
+      <remove>Poista</remove>
+      <inclvat>sis. ALV</inclvat>
+      <vat>ALV</vat>
+      <total>Yhteensä</total>
+      <productstotal>Tuotteet yhteensä</productstotal>
+      <productsvattotal>Tuotteiden ALV yhteensä</productsvattotal>
+      <shippingcostsareadded>Toimituskulut lisätään tilauksen hintaan</shippingcostsareadded>
+      <choosemoreproducts>Valitse lisää tuotteita</choosemoreproducts>
+      <emptyshoppingcart>Tyhjennä ostoskori</emptyshoppingcart>
+      <movetocheckout>Siirry kassalle</movetocheckout>
+      <giftaddedtocart>Lahja lisätty koriin</giftaddedtocart>
+      <choosemultiplegifts>Halutessasi voit valita useita lahjoja ja lähettää ne eri vastaanottajille kerralla.</choosemultiplegifts>
+      <choosemooregifts>Valitse lisää lahjoja</choosemooregifts>
+      <sendgiftnow>Lähetä lahja nyt</sendgiftnow>
+    </commerceshoppingcart>
+    <shopcheckout>
+      <shoppingcartsummary>Ostoskorin yhteenveto</shoppingcartsummary>
+      <shoppingcartmergedtitle>Keskeneräinen ostoskori löytynyt</shoppingcartmergedtitle>
+      <shoppingcartmergedtext>Tunnuksellasi on löytynyt keskeneräinen ostoskori ja tämä on yhdistetty nykyiseen ostoskoriisi.</shoppingcartmergedtext>
+      <customerinformationandshipping>Asiakastiedot ja toimitustapa</customerinformationandshipping>
+      <confirmorder>Vahvista tilaus</confirmorder>
+      <customerinformation>Asiakastiedot</customerinformation>
+      <pleasecheckmarkedfields>Ole hyvä ja tarkista merkityt kentät</pleasecheckmarkedfields>
+      <checkfield>Tarkista kenttä</checkfield>
+      <continuetocustomerinformation>Jatka tilausta</continuetocustomerinformation>
+      <doyoualreadyhaveanaccount>Onko sinulla jo MymyCompany tunnus?</doyoualreadyhaveanaccount>
+      <logintouseyouraccount>Kirjaudu sisään käyttääksesi tunnukseesi tallennettuja yhteystietoja</logintouseyouraccount>
+      <noaccountfillininformation>Ei tunnusta? Ole hyvä ja täytä tiedot</noaccountfillininformation>
+      <fillininformationfootnote>Samalla luot MymyCompany-tunnuksen. Sillä käytät kätevästi kaikkia myCompanyin verkkopalveluja.</fillininformationfootnote>
+      <checkcustomerinformation>Tarkista asiakastiedot</checkcustomerinformation>
+      <checkcustomerinformationfootnote>Tiedot on täytetty MymyCompany-tunnuksesi tiedoista. Tarkistathan, että ne ovat ajan tasalla.</checkcustomerinformationfootnote>
+      <owninformation>Omat tiedot</owninformation>
+      <subscriberinformation>Tilaajan tiedot</subscriberinformation>
+      <emailasusernamenotification>Sähköpostiosoite toimii käyttäjätunnuksenasi myCompanyin verkkopalveluissa</emailasusernamenotification>
+      <customertype>Asiakkuustyyppi</customertype>
+      <shippingaddressissameasbillingaddress>Tilauksen toimitusosoite on sama kuin tilaajan osoite</shippingaddressissameasbillingaddress>
+      <billingaddress>Laskutusosoite</billingaddress>
+      <shippingaddress>Toimitusosoite</shippingaddress>
+      <choosedeliverymethod>Valitse toimitustapa (sis. alv 14 %)</choosedeliverymethod>
+      <searchpickuppointwithpostalcode>Hae pakettiautomaatti postinumerolla</searchpickuppointwithpostalcode>
+      <choosepickuppoint>Ole hyvä ja valitse noutopiste</choosepickuppoint>
+      <pickuppoint>Noutopiste</pickuppoint>
+      <proceedwithorder>Jatka tilausta</proceedwithorder>
+      <accountcreationfootnote>Tilauksen yhteydessä sinulle luodaan MymyCompany-tunnus. Jatkamalla vahvistat, että hyväksyt</accountcreationfootnote>
+      <termsofuselowercase>palvelun käyttöehdot</termsofuselowercase>
+      <product>Tuote</product>
+      <quantity>Määrä</quantity>
+      <productandquantity>Tuote ja määrä</productandquantity>
+      <pricelowercase>hinta</pricelowercase>
+      <pc>kpl</pc>
+      <shippingcosts>Toimituskulut</shippingcosts>
+      <additionalInformation>Viesti / tilauksen lisätiedot</additionalInformation>
+      <additionalInformationinvoiceaddition>(esim. yhteyshenkilö, laskun viite, kustannuspaikka)</additionalInformationinvoiceaddition>
+      <paymentmethod>Maksutapa</paymentmethod>
+      <choosepaymentmethod>Valitse maksutapa</choosepaymentmethod>
+      <ovtidentifier>Ovt-tunnus</ovtidentifier>
+      <invoicepaymentnotification>Ole hyvä ja täytä lisätietokenttään lisätietoa laskusta (esim. yhteyshenkilö, laskun viite, kustannuspaikka)</invoicepaymentnotification>
+      <confirmandsendorder>Vahvista ja lähetä tilaus</confirmandsendorder>
+      <bycontinuingyouaccept>Jatkamalla tilausta vahvistat, että hyväksyt</bycontinuingyouaccept>
+      <thetermsandconditions>toimitusehdot sekä palvelun käyttöehdot</thetermsandconditions>
+      <thankyouforyourorder>Kiitos tilauksestasi! Tilauksesi on lähtenyt purkkatehtaallemme Karkkilaan.</thankyouforyourorder>
+      <ordernumber>Tilausnumero</ordernumber>
+      <printreceipt>Tulosta kuitti</printreceipt>
+      <orderconfirmation>Tilausvahvistus</orderconfirmation>
+      <orderhasbeencancelled>Tilaus on peruutettu</orderhasbeencancelled>
+      <yourorderhasbeencancelled>Tilauksesi on peruutettu</yourorderhasbeencancelled>
+      <ordercountrynotavailable>Tilaaminen ei valitettavasti ole mahdollista tietoihisi määritetystä maasta.</ordercountrynotavailable>
+      <movetomypage>Siirry omiin tietoihin</movetomypage>
+      <orderingnotavailablefromcurrentaccount>Et ole kirjautunut MymyCompany-tunnuksilla, tilaaminen on estetty.</orderingnotavailablefromcurrentaccount>
+      <inclvat>sis. ALV</inclvat>
+      <productstotal>Tuotteet yhteensä</productstotal>
+      <ordertotalexclvat>Kokonaishinta ilman ALV</ordertotalexclvat>
+      <productsvattotal>Tuotteiden ALV yhteensä</productsvattotal>
+      <ordertotal>Tilauksen kokonaishinta</ordertotal>
+      <total>Yhteensä</total>
+    </shopcheckout>
+    <mypage>
+      <accountmanagement>MymyCompany-tilinhallinta</accountmanagement>
+      <hello>Hei</hello>
+      <accountmanagementinformation>Täällä voit hallita MymyCompany-tiliisi ja tekemiisi tilauksiin liittyviä asioita</accountmanagementinformation>
+      <owninformation>Omat tiedot</owninformation>
+      <saveinformation>Tallenna tiedot</saveinformation>
+      <informationupdated>Tiedot päivitetty</informationupdated>
+      <errorsavinginformation>Virhe tietojen tallennuksessa</errorsavinginformation>
+      <emailfootnote>Voit käyttää kaikkia myCompanyin palveluja samalla MymyCompany-tunnuksella. Tähän osoitteeseen lähetetään myös tiedotteet ja tilausvahvistukset.</emailfootnote>
+      <passwordfootnote>Käytäthän sellaista salasanaa, jota et käytä toisessa verkkopalvelussa.</passwordfootnote>
+      <orderhistory>Tilaushistoria</orderhistory>
+      <noorders>Ei tilauksia</noorders>
+      <inclvatandshippingcosts>sis. ALV ja toimituskulut</inclvatandshippingcosts>
+      <pc>kpl</pc>
+      <inclvat>sis. ALV</inclvat>
+      <productnum>Tuotenro</productnum>
+      <shipping>Toimitus</shipping>
+      <billingaddress>Laskutusosoite</billingaddress>
+      <shippingaddress>Toimitusosoite</shippingaddress>
+      <additionalInformation>Viesti / tilauksen lisätiedot</additionalInformation>
+      <showcontent>Näytä sisältö</showcontent>
+      <hidecontent>Piilota sisältö</hidecontent>
+      <productinformationnotavailable>Tuotetietoja ei saatavilla</productinformationnotavailable>
+      <shippingmethodnotavailable>Toimitustavan tietoja ei saatavilla</shippingmethodnotavailable>
+      <customerservicecontactinformation>myCompanyin asiakaspalvelun yhteystiedot</customerservicecontactinformation>
+    </mypage>
+    <giftingshopcheckout>
+      <chooseagift>Valitse lahja</chooseagift>
+      <packaging>Paketointi</packaging>
+      <owninformation>Omat tiedot</owninformation>
+    </giftingshopcheckout>
+    <meetings>
+      <locationblocktitle>Kokous- ja juhlatilat</locationblocktitle>
+      <city>Kaupunki</city>
+      <location>Sijainti</location>
+      <all>Kaikki</all>
+      <participants>Osallistujia</participants>
+      <moresearchterms>Lisää hakuehtoja</moresearchterms>
+      <date>Päivämäärä</date>
+      <starttime>Alkamisaika</starttime>
+      <endtime>Loppumisaika</endtime>
+      <showlocations>Näytä tilat</showlocations>
+      <area>Pinta-ala</area>
+      <features>Varustelu</features>
+      <roomtype>Huonetyyppi</roomtype>
+      <suitableroom>sopiva tila</suitableroom>
+      <suitablerooms>sopivaa tila</suitablerooms>
+      <backtolocationresults>Takaisin listaukseen</backtolocationresults>
+      <nolocationsearchresults>Ei hakutuloksia</nolocationsearchresults>
+      <maxnpersons>Max. {0} hlöä</maxnpersons>
+      <roomstitle>Tilat</roomstitle>
+      <directionstitle>Sijainti ja yhteydet</directionstitle>
+      <calendartitle>Kalenteri</calendartitle>
+      <calendardaytitle>Päivä</calendardaytitle>
+      <calendarweektitle>Viikko</calendarweektitle>
+      <book>Varaa</book>
+      <createbookingrequest>Tee varauspyyntö</createbookingrequest>
+      <parkingslots>Parkkipaikat</parkingslots>
+      <company>Yritys</company>
+      <CustomerName>Tilaajan nimi</CustomerName>
+      <ordererEmail>Tilaajan sähköposti</ordererEmail>
+      <ordererPhone>Tilaajan puhelinnumero</ordererPhone>
+      <HostOfTheEvent>Tilaisuuden isäntä</HostOfTheEvent>
+      <HostPhone>Isännän puhelinnumero</HostPhone>
+      <AdditionalWishes>Lisätoiveet</AdditionalWishes>
+      <CostCenter>Kustannuspaikka</CostCenter>
+      <CustomerNumber>Asiakasnumero</CustomerNumber>
+      <InvoicingReference>Laskun viite</InvoicingReference>
+      <PaymentMethod>Maksutapa</PaymentMethod>
+      <Invoice>Laskulla</Invoice>
+      <PayInRestaurant>Maksu ravintolassa</PayInRestaurant>
+      <BookerEmailMarketingAllowed>Sähköpostimarkkinointi sallittu</BookerEmailMarketingAllowed>
+      <Yes>Kyllä</Yes>
+      <No>Ei</No>
+      <OwnNotes>Omat muistiinpanot</OwnNotes>
+      <eventschedule>Tilaisuuden aikataulu</eventschedule>
+      <alltotal>Kaikki yhteensä</alltotal>
+      <alltotalnet>Yhteensä netto</alltotalnet>
+      <billingaddress>Laskutusosoite</billingaddress>
+      <einvoiceaddress>Verkkolaskuosoite</einvoiceaddress>
+      <reservationdate>Varauspäivä</reservationdate>
+    </meetings>
+  </language>
+</languages>

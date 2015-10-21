@@ -1,0 +1,15 @@
+<languages>
+  <language id="en" name="English">
+    <common>
+      <sitename>My Company</sitename>
+      <languagemenufi>Finnish</languagemenufi>
+    </common>
+  </language>
+  <language id="sv" name="svenska">
+    <common>
+      <sitename>min company</sitename>
+      <languagemenufi>Finska</languagemenufi>
+      <languagemenuen>English</languagemenuen>
+    </common>
+  </language>
+</languages>
