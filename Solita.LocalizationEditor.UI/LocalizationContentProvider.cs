@@ -4,6 +4,7 @@ using EPiServer;
 using EPiServer.Framework.Localization.XmlResources;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
+using Solita.LocalizationEditor.UI.Common;
 using Solita.LocalizationEditor.UI.Models;
 
 namespace Solita.LocalizationEditor.UI
@@ -25,7 +26,7 @@ namespace Solita.LocalizationEditor.UI
         {
             var localization = ServiceLocator.Current
                 ?.GetInstance<IContentRepository>()
-                ?.GetChildren<LocalizationXml>(SiteDefinition.Current.GlobalAssetsRoot)
+                ?.GetChildren<LocalizationXml>(Settings.AutoPopulated.StorageRoot)
                 ?.FirstOrDefault();
 
             if (localization == null)

@@ -1,5 +1,8 @@
 ﻿using System.Web.UI.WebControls;
+using EPiServer.Core;
 using EPiServer.PlugIn;
+using EPiServer.Web;
+using EPiServer.Web.WebControls;
 
 namespace Solita.LocalizationEditor.UI.Common
 {
@@ -29,5 +32,22 @@ namespace Solita.LocalizationEditor.UI.Common
            AdminControl = typeof(CheckBox),
            AdminControlValue = "Checked")]
         public bool DisablePowertoolsMode { get; set; }
+
+        [PlugInProperty(Description = "Alternative storage root (default: global assests)",
+           AdminControl = typeof(InputPageReference),
+           AdminControlValue = "PageLink")]
+        public ContentReference AlternativeStorageRoot { get; set; }
+
+        public ContentReference StorageRoot
+        {
+            get
+            {
+                if (!ContentReference.IsNullOrEmpty(AlternativeStorageRoot))
+                {
+                    return AlternativeStorageRoot;
+                }
+                return SiteDefinition.Current.GlobalAssetsRoot;
+            }
+        }
     }
 }
