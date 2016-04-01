@@ -9,19 +9,23 @@ using EPiServer;
 using EPiServer.Framework.Blobs;
 using System.IO;
 using EPiServer.DataAccess;
+using Solita.LocalizationEditor.UI.Common;
 
 namespace Solita.LocalizationEditor.UI.DAL
 {
     public class ContentAccessStrategy : FileAccessStrategy
     {
         private readonly IContentRepository _contentRepository;
+        private readonly ContentReference _storageRoot;
         private const string TranslationFile = "data.localizationdata";
         private const string TranslationFileExtension = ".localizationdata";
 
         public ContentAccessStrategy()
         {
             _contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
+            _storageRoot = Settings.AutoPopulated.StorageRoot;
         }
+
         public override IList<XmlVersionInfo> GetTranslationFileVersions()
         {
             var versions = new List<XmlVersionInfo>();
@@ -29,7 +33,7 @@ namespace Solita.LocalizationEditor.UI.DAL
             var versionRepository =
                 ServiceLocator.Current.GetInstance<IContentVersionRepository>();
             var localization = _contentRepository
-                .GetChildren<LocalizationXml>(SiteDefinition.Current.GlobalAssetsRoot)
+                .GetChildren<LocalizationXml>(_storageRoot)
                 ?.FirstOrDefault();
 
             if (localization == null)
@@ -53,7 +57,7 @@ namespace Solita.LocalizationEditor.UI.DAL
         public override XmlDocument LoadVersion(string version)
         {
             var localization = _contentRepository
-                .GetChildren<LocalizationXml>(SiteDefinition.Current.GlobalAssetsRoot)
+                .GetChildren<LocalizationXml>(_storageRoot)
                 ?.FirstOrDefault();
 
             if (localization == null)
@@ -85,7 +89,7 @@ namespace Solita.LocalizationEditor.UI.DAL
         public override void SaveXml(XmlDocument xml)
         {
             var localization = _contentRepository
-                .GetChildren<LocalizationXml>(SiteDefinition.Current.GlobalAssetsRoot)
+                .GetChildren<LocalizationXml>(_storageRoot)
                 ?.FirstOrDefault();
 
             if (localization != null)
@@ -95,7 +99,7 @@ namespace Solita.LocalizationEditor.UI.DAL
             else
             {
                 localization = _contentRepository
-                    .GetDefault<LocalizationXml>(SiteDefinition.Current.GlobalAssetsRoot);
+                    .GetDefault<LocalizationXml>(_storageRoot);
                 localization.Name = TranslationFile;
             }
 
@@ -114,5 +118,7 @@ namespace Solita.LocalizationEditor.UI.DAL
             localization.BinaryData = blob;
             _contentRepository.Save(localization, SaveAction.Publish);
         }
+
+        
     }
 }
